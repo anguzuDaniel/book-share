@@ -1,0 +1,11 @@
+{
+  "name": "book-share",
+  "version": "1.0.0",
+  "description": "This is book share application in written in php",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anguzu Daniel",
+  "license": "ISC"
+}

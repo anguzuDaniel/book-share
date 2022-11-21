@@ -26,11 +26,14 @@
     </header>
 
     <main>
+        <!--Hero section | starts here-->
         <section class="hero">
             <h2>Share your books with the world</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
             <a href="">Register</a>
         </section>
+        <!--Hero section | ends here-->
+
     </main>
 </body>
 
