@@ -1,0 +1,57 @@
+.btn {
+	cursor: pointer;
+	border: none;
+
+	&__control {
+		width: 100%;
+		display: flex;
+		color: white;
+
+		button {
+			padding: var(--pad);
+			font-weight: bold;
+			border-bottom: none;
+			font-size: 1.2rem;
+			color: var(--heading-clr);
+		}
+
+		&--signup {
+			width: 100%;
+			border: none;
+			background-color: var(--control-btn-clr);
+		}
+
+		&--login {
+			width: 100%;
+			border: none;
+			background-color: white;
+		}
+	}
+
+	&--primary {
+		background: var(--color-gredient);
+		background: var(--btn-clr);
+		width: 100%;
+		padding-inline: var(--);
+		padding-block: var(--padding-block);
+		color: var(--clr-white);
+		transition: all 0.3s ease-in-out;
+		border-radius: var(--btn-radius);
+	}
+}
+
+.signup__btn {
+	background-color: rgb(217, 141, 0);
+	color: white;
+	padding: 0.5rem 0.8rem;
+}
+
+.hero__btn {
+	padding: 0.25rem 0.8rem;
+	border: none;
+	cursor: pointer;
+	border-top-right-radius: var(--size-1);
+	border-bottom-right-radius: var(--size-1);
+	background-color: rgb(217, 141, 0);
+	color: white;
+}

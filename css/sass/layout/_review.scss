@@ -1,0 +1,18 @@
+.review {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	gap: 20px;
+	margin: var(--size-9) var(--size-9);
+
+	&__wrapper {
+		border: 1px solid rgba(0, 0, 0, 0.447);
+		padding: 1rem;
+		box-shadow: var(--shadow-1);
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+}

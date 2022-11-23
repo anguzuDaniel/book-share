@@ -1,16 +1,29 @@
 /* the props */
-@import "open-props/style";
+@use "./vendors/props" as *;
 
-@use "abstract/function" as *;
-@use "abstract/mixins" as *;
-@use "abstract/variables" as *;
+@use "./abstract/function" as *;
+@use "./abstract/mixins" as *;
+@use "./abstract/variables" as *;
 
-@use "base/animations";
-@use "base/base";
-@use "base/typography";
-@use "base/utilities";
+@use "./base/animations" as *;
+@use "./base/base";
+@use "./base/typography" as *;
+@use "./base/utilities" as *;
 
-@use "components/buttons";
-@use "components/cards";
-@use "components/header";
-@use "components/footer";
+@use "./components/buttons" as *;
+@use "./components/cards" as *;
+@use "./components/form" as *;
+@use "./components/table" as *;
+@use "./components/nav" as *;
+
+@use "./layout/header" as *;
+@use "./layout/footer" as *;
+@use "./layout/aside" as *;
+@use "./layout/container" as *;
+@use "./layout/hero" as *;
+@use "./layout/books" as *;
+@use "./layout/about" as *;
+@use "./layout/review" as *;
+
+@use "./pages/login" as *;
+@use "./pages/admin" as *;

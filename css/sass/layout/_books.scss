@@ -1,0 +1,39 @@
+.book {
+	margin-inline: var(--size-9);
+	margin-block: var(--size-9);
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+		gap: 20px;
+
+		article {
+			border: var(--shadow-2);
+            border: 1px solid var(--border);
+		}
+	}
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: .8rem;
+    }
+
+	&__image {
+		width: 100%;
+	}
+
+	&__author {
+		font-size: 1.2rem;
+	}
+
+	&__description {
+		font-size: 1rem;
+	}
+
+	&__more {
+		text-align: center;
+		margin-block: var(--size-2);
+	}
+}

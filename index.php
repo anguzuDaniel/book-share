@@ -1,40 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php require_once "includes/header.php"; ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 
-<body>
-    <header>
-        <h1>Book Share</h1>
+<main>
+    <!-- navigation bar | start -->
+    <?php require_once "includes/navigation.php"; ?>
+    <!-- navigation bar | end -->
 
-        <nav>
-            <a href="">All books</a>
-            <a href="">Education</a>
-            <a href="">Thriller</a>
-            <a href="">Adventure</a>
-        </nav>
+    <!--Hero section | starts here-->
+    <section class="hero__container">
+        <h2 class="hero__heading">Share your books with the world</h2>
 
-        <div class="header__cta">
-            <a href="">Login</a>
-            <a href="">Register</a>
+        <div class="hero__search">
+            <input type="search" name="" id="" class="hero__search">
+            <button class="hero__btn">Search</button>
         </div>
-    </header>
+        <p class="hero__paragraph">Search from a large number of authors</p>
+    </section>
+    <!--Hero section | ends here-->
+    </div>
 
-    <main>
-        <!--Hero section | starts here-->
-        <section class="hero">
-            <h2>Share your books with the world</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-            <a href="">Register</a>
-        </section>
-        <!--Hero section | ends here-->
+    </section>
 
-    </main>
-</body>
+    <section class="book">
 
-</html>
+        <h1 class="book__title">Best Sellers</h1>
+
+        <div class="book__wrapper">
+            <!-- book start | start here -->
+            <article>
+                <img src="images/images (1).png" alt="image" class="book__image">
+                <div class="book__description">
+                    <h3 class="book__author">Anguzu Daniel</h3>
+                    <p class="book__text">Lorem ipsum dolor </p> <a href="#" class="book__read">Read now</a>
+                </div>
+            </article>
+            <!-- book start | ends here -->
+
+            <!-- book start | start here -->
+            <article>
+                <img src="images/images (1).png" alt="image" class="book__image">
+                <div class="book__description">
+                    <h3 class="book__author">Anguzu Daniel</h3>
+                    <p class="book__text">Lorem ipsum dolor </p> <a href="#" class="book__read">Read now</a>
+                </div>
+            </article>
+            <!-- book start | ends here -->
+
+            <!-- book start | start here -->
+            <article>
+                <img src="images/images (1).png" alt="image" class="book__image">
+                <div class="book__description">
+                    <h3 class="book__author">Anguzu Daniel</h3>
+                    <p class="book__text">Lorem ipsum dolor </p> <a href="#" class="book__read">Read now</a>
+                </div>
+            </article>
+            <!-- book start | ends here -->
+            <article>
+                <img src="images/images (1).png" alt="image" class="book__image">
+                <div class="book__description">
+                    <h1 class="book__author">Anguzu Daniel</h1>
+                    <p class="book__text">Lorem ipsum dolor </p> <a href="#" class="book__read">Read now</a>
+                </div>
+            </article>
+            <!-- book start | ends here -->
+            <!-- book start | start here -->
+            <article>
+                <img src="images/images (1).png" alt="image" class="book__image">
+                <div class="book__description">
+                    <h3 class="book__author">Anguzu Daniel</h3>
+                    <p class="book__text">Lorem ipsum dolor </p> <a href="#" class="book__read">Read now</a>
+                </div>
+            </article>
+            <!-- book start | ends here -->
+
+            <!-- book start | start here -->
+            <article>
+                <img src="images/images (1).png" alt="image" class="book__image">
+                <div class="book__description">
+                    <h3 class="book__author">Anguzu Daniel</h3>
+                    <p class="book__text">Lorem ipsum dolor </p> <a href="#" class="book__read">Read now</a>
+                </div>
+            </article>
+            <!-- book start | ends here -->
+
+            <!-- book start | start here -->
+            <article>
+                <img src="images/images (1).png" alt="image" class="book__image">
+                <div class="book__description">
+                    <h3 class="book__author">Anguzu Daniel</h3>
+                    <p class="book__text">Lorem ipsum dolor </p> <a href="#" class="book__read">Read now</a>
+                </div>
+            </article>
+            <!-- book start | ends here -->
+            <article>
+                <img src="images/images (1).png" alt="image" class="book__image">
+                <div class="book__description">
+                    <h1 class="book__author">Anguzu Daniel</h1>
+                    <p class="book__text">Lorem ipsum dolor </p> <a href="#" class="book__read">Read now</a>
+                </div>
+            </article>
+            <!-- book start | ends here -->
+        </div>
+
+        <a href="#" class="book__more">More books</a>
+    </section>
+
+    <section class="about">
+        <div class="about__image"></div>
+        <div class="about__text">
+            <h1 class="about__title">What we do?</h1>
+            <p class="about__paragrah">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint saepe animi nesciunt nobis consequuntur autem corporis repellendus sequi ad sed, consequatur aliquam? Fugiat dolore natus architecto dignissimos repellendus ab voluptatibus.</p>
+        </div>
+    </section>
+
+    <section class="review">
+        <!-- review wrapper | starts here -->
+        <div class="review__wrapper">
+            <img src="" alt="" srcset="">
+
+            <div class="review__content">
+                <h1 class="review__title">Anguzu Daniel</h1>
+                <p class="review_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi tempore sunt mollitia veritatis sit deserunt cumque vel omnis porro, quaerat ratione aliquam odit harum. Suscipit maxime voluptatibus eos porro nihil!</p>
+                <!-- <span class="review__date">2012</span> -->
+            </div>
+        </div>
+        <!-- review wrapper | ends here -->
+
+        <!-- review wrapper | starts here -->
+        <div class="review__wrapper">
+            <img src="" alt="" srcset="">
+
+            <div class="review__content">
+                <h1 class="review__title">Kenyi Jonathan</h1>
+                <p class="review_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi tempore sunt mollitia veritatis sit deserunt cumque vel omnis porro, quaerat ratione aliquam odit harum. Suscipit maxime voluptatibus eos porro nihil!</p>
+                <!-- <span class="review__date">2012</span> -->
+            </div>
+        </div>
+        <!-- review wrapper | ends here -->
+    </section>
+</main>
+
+<footer>
+
+</footer>
+<?php require_once "includes/header.php"; ?>
