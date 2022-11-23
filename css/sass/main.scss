@@ -1,2 +1,16 @@
 /* the props */
 @import "open-props/style";
+
+@use "abstract/function" as *;
+@use "abstract/mixins" as *;
+@use "abstract/variables" as *;
+
+@use "base/animations";
+@use "base/base";
+@use "base/typography";
+@use "base/utilities";
+
+@use "components/buttons";
+@use "components/cards";
+@use "components/header";
+@use "components/footer";
