@@ -23,10 +23,10 @@
                 <h1 class="form--title">Sign Up</h1>
 
                 <!-- signup form | start -->
-                <form action="index.php" id="signup" method="post">
+                <form action="index.php" id="signup" method="post" class="form__wrapper">
                     <label for="">Email</label>
 
-                    <div class="form__row">
+                    <div class="form__wrapper--row">
                         <div class="form__icon--wrapper">
                             <img src="images/icons8-envelope-64.png" alt="" srcset="" class="form__icon" />
                         </div>
@@ -36,7 +36,7 @@
                         </div>
                     </div>
 
-                    <div class="form__row">
+                    <div class="form__wrapper--row">
                         <label for="">Username</label>
                         <div class="form__icon--wrapper">
                             <img src="images/icons8-user-64.png" alt="" srcset="" class="form__icon" />
@@ -47,7 +47,7 @@
                         </div>
                     </div>
 
-                    <div class="form__row">
+                    <div class="form__wrapper--row">
                         <label for="">Password</label>
                         <div class="form__icon--wrapper">
                             <img src="images/icons8-password-64 (1).png" alt="" srcset="" class="form__icon" />
@@ -58,7 +58,7 @@
                         </div>
                     </div>
 
-                    <div class="form__row">
+                    <div class="form__wrapper--row">
                         <label for="">Confirm password</label>
                         <div class="form__icon--wrapper">
                             <img src="images/icons8-password-64 (1).png" alt="" srcset="" class="form__icon" />
@@ -98,8 +98,8 @@
 
             <div class="form__login notShown">
                 <h1 class="form--title">Sign In</h1>
-                <form action="" id="login">
-                    <div class="form__row">
+                <form action="" id="login" class="form__wrapper">
+                    <div class="form__wrapper--row">
                         <label for="">Username/email</label>
 
                         <div class="form__icon--wrapper">
@@ -111,7 +111,7 @@
                         </div>
                     </div>
 
-                    <div class="form__row">
+                    <div class="form__wrapper--row">
                         <label for="">Password</label>
 
                         <div class="form__icon--wrapper">

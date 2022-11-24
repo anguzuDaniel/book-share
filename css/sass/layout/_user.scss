@@ -39,8 +39,8 @@
 		input,
 		textarea {
 			width: 100%;
-			padding: var(--size-2) var(--size-1);
-			border: none;
+			padding: var(--size-2) var(--size-3);
+			border: 1px solid var(--border);
 			outline: none;
 
 			&:active,

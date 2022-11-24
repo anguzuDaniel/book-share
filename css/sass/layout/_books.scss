@@ -10,7 +10,6 @@
 
 		article {
 			display: flex;
-			// overflow: hidden;
 			border: 1px solid var(--border);
 			box-shadow: var(--shadow-0);
 			border-radius: var(--radius-2);
@@ -23,32 +22,39 @@
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
-		width: 4000px;
 	}
 
 	&__image {
 		border: var(--shadow-4);
-		width: 2000px;
 		transform: translateY(-50px);
-		box-shadow: var(--shadow-0);
+		box-shadow: var(--shadow-3);
+		height: 120%;
+		overflow: hidden;
+		cursor: pointer;
+		width: 700px;
 
 		img {
 			width: 100%;
+			aspect-ratio: 10/ 9;
+			inset: 0;
+			inline-size: 100%;
+			height: 100%;
+			transition: all 0.3s ease-in-out;
+
+			&:hover {
+				transform: scale(1.2);
+			}
 		}
 	}
 
 	&__author {
-		font-size: 1.2rem;
-	}
-
-	&__description {
-		font-size: var(--font-size-fluid-0);
+		font-size: 0.8rem;
 	}
 
 	&__more {
 		text-align: center;
 		margin-top: var(--size-4);
-		transition: all .3s ease-in-out;
+		transition: all 0.3s ease-in-out;
 	}
 
 	a {
@@ -59,11 +65,22 @@
 		}
 	}
 
+	&--title {
+		text-transform: uppercase;
+		margin-bottom: var(--size-7);
+	}
+
 	&__title {
-		margin-bottom: var(--size-4);
+		text-transform: capitalize;
+		font-size: var(--size-3);
+		opacity: 0.8;
 	}
 
 	&__text {
-		font-size: var(--font-size-1);
+		font-size: 0.8rem;
+	}
+
+	&__download {
+		font-size: 1rem;
 	}
 }

@@ -48,64 +48,7 @@ require_once "includes/header.php";
                     </div>
                 </div>
 
-                <div class="admin__all--writters">
-
-                    <div class="admin__all--heading">
-                        <h1>All Writers</h1>
-
-                        <div class="admin__search">
-                            <input type="search" name="admin__search--imput" id="" class="admin__search--input" placeholder="search by tags">
-                            <button class="admin__search--btn">
-                                <em class="fa-solid fa-magnifying-glass"></em>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="admin__actions">
-                        <div class="admin__sort">
-                            <!-- <label for="sort">sort by</label> -->
-                            <select name="sort-by">
-                                <option value="date">
-                                    <span>latest</span>
-                                </option>
-                                <option value="date">oldest</option>
-                                <option value="date">height views</option>
-                                <option value="date">lowest views</option>
-                                <option value="date">id</option>
-                            </select>
-
-                            <select name="sort-by">
-                                <option value="date">
-                                    <span>latest</span>
-                                </option>
-                                <option value="date">oldest</option>
-                                <option value="date">height views</option>
-                                <option value="date">lowest views</option>
-                                <option value="date">id</option>
-                            </select>
-
-                            <select name="sort-by">
-                                <option value="date">
-                                    <span>latest</span>
-                                </option>
-                                <option value="date">oldest</option>
-                                <option value="date">height views</option>
-                                <option value="date">lowest views</option>
-                                <option value="date">id</option>
-                            </select>
-
-                        </div>
-
-                        <div class="admin__sort--performed">
-                            <div class="admin__sort--filter">
-
-                                <p>Active filters/tags:</p>
-                                <p class="admin__sort--tag"><span> none <a href="#">
-                                            <em class="fa-solid fa-circle-xmark"></em></span></a></p>
-                                <!-- <a href="#" class="admin__sort--clear">clear all</a> -->
-                            </div>
-                        </div>
-                    </div>
+                <div class="admin__table">
 
                     <table>
                         <thead>
@@ -213,29 +156,6 @@ require_once "includes/header.php";
                             </tr>
 
                     </table>
-
-                    <div class="table__footer">
-                        <div class="table__footer--result">
-                            <span class="result__num">10</span>
-                            <p>Results</p>
-                        </div>
-
-                        <div class="table__footer--pages">
-                            <div>
-                                <label for="per__page">Row per page: </label>
-                                <select name="" id="">
-                                    <option value="">10</option>
-                                    <option value="">15</option>
-                                    <option value="">20</option>
-                                    <option value="">25</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <p>1 - 10 of 10</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 

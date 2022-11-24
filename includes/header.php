@@ -15,3 +15,6 @@
 </head>
 
 <body>
+    <?php
+    require_once "config/dbConfig.php";
+    require_once "functions/functions.php";

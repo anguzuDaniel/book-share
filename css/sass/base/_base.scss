@@ -6,11 +6,14 @@
 	box-sizing: border-box;
 }
 
-
 body {
-	background-color: var(--background-color);
+	background-color: var(--gray-1);
 }
 
 article {
 	background-color: white;
+}
+
+a {
+	text-transform: capitalize;
 }

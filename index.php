@@ -1,107 +1,40 @@
 <?php require_once "includes/header.php"; ?>
 
+<?php
+
+$conn = getConn();
+
+$books = getBooksLimit($conn, 6);
+
+?>
 
 <main>
-    <!-- navigation bar | start -->
-    <?php require_once "includes/navigation.php"; ?>
-    <!-- navigation bar | end -->
+    <section class="hero">
+        <div class="hero__image"></div>
+        <div class="hero__main">
 
-    <!--Hero section | starts here-->
-    <section class="hero__container">
-        <h2 class="hero__heading">Share your books with the world</h2>
+            <!-- navigation bar | start -->
+            <?php require_once "includes/navigation.php"; ?>
+            <!-- navigation bar | end -->
 
-        <div class="hero__search">
-            <input type="search" name="" id="" class="hero__search">
-            <button class="hero__btn">Search</button>
+            <!-- hero section | start -->
+            <?php require_once "includes/hero.php"; ?>
+            <!-- hero section | end -->
+
         </div>
-        <p class="hero__paragraph">Search from a large number of authors</p>
-    </section>
-    <!--Hero section | ends here-->
-    </div>
-
     </section>
 
+    <!-- book section | start -->
     <section class="book">
-
-        <h1 class="book__title">Best Sellers</h1>
+        <h1 class="book--title">Best Sellers</h1>
 
         <div class="book__wrapper">
-            <!-- book start | start here -->
-            <article>
-                <div class="book__image">
-                    <img src="images/images (1).png" alt="image">
-                </div>
-                <div class="book__description">
-                    <h3 class="book__author">Anguzu Daniel</h3>
-                    <p class="book__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint saepe animi nesciunt nobis consequuntur autem corporis repellendus sequi ad sed,</p>
-                    <a href="#" class="book__read">Read now</a>
-                </div>
-            </article>
-            <!-- book start | ends here -->
-            <!-- book start | start here -->
-            <article>
-                <div class="book__image">
-                    <img src="images/images (1).png" alt="image">
-                </div>
-                <div class="book__description">
-                    <h3 class="book__author">Anguzu Daniel</h3>
-                    <p class="book__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint saepe animi nesciunt nobis consequuntur autem corporis repellendus sequi ad sed,</p>
-                    <a href="#" class="book__read">Read now</a>
-                </div>
-            </article>
-            <!-- book start | ends here -->
-            <!-- book start | start here -->
-            <article>
-                <div class="book__image">
-                    <img src="images/images (1).png" alt="image">
-                </div>
-                <div class="book__description">
-                    <h3 class="book__author">Anguzu Daniel</h3>
-                    <p class="book__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint saepe animi nesciunt nobis consequuntur autem corporis repellendus sequi ad sed,</p>
-                    <a href="#" class="book__read">Read now</a>
-                </div>
-            </article>
-            <!-- book start | ends here -->
-            <!-- book start | start here -->
-            <article>
-                <div class="book__image">
-                    <img src="images/images (1).png" alt="image">
-                </div>
-                <div class="book__description">
-                    <h3 class="book__author">Anguzu Daniel</h3>
-                    <p class="book__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint saepe animi nesciunt nobis consequuntur autem corporis repellendus sequi ad sed,</p>
-                    <a href="#" class="book__read">Read now</a>
-                </div>
-            </article>
-            <!-- book start | ends here -->
-            <!-- book start | start here -->
-            <article>
-                <div class="book__image">
-                    <img src="images/images (1).png" alt="image">
-                </div>
-                <div class="book__description">
-                    <h3 class="book__author">Anguzu Daniel</h3>
-                    <p class="book__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint saepe animi nesciunt nobis consequuntur autem corporis repellendus sequi ad sed,</p>
-                    <a href="#" class="book__read">Read now</a>
-                </div>
-            </article>
-            <!-- book start | ends here -->
-            <!-- book start | start here -->
-            <article>
-                <div class="book__image">
-                    <img src="images/images (1).png" alt="image">
-                </div>
-                <div class="book__description">
-                    <h3 class="book__author">Anguzu Daniel</h3>
-                    <p class="book__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint saepe animi nesciunt nobis consequuntur autem corporis repellendus sequi ad sed,</p>
-                    <a href="#" class="book__read">Read now</a>
-                </div>
-            </article>
-            <!-- book start | ends here -->
+            <?php require_once "includes/books.php"; ?>
         </div>
 
         <p class="book__more"><a href="#">More books</a></p>
     </section>
+    <!-- book section | start -->
 
     <!-- About section | start -->
     <section class="about">
@@ -112,7 +45,6 @@
         </div>
     </section>
     <!-- About section | start -->
-
 
 
     <!-- sliding cards section -->
@@ -293,24 +225,4 @@
         </div>
     </section>
 </main>
-
-<footer class="footer">
-    <nav>
-        <ul>
-            <li><a href="">All books</a></li>
-            <li><a href="">Education</a></li>
-            <li><a href="">Thriller</a></li>
-            <li><a href="">Adventure</a></li>
-        </ul>
-    </nav>
-
-    <div class="footer__cta">
-        <h1 class="footer__heading">Join our mailing list</h1>
-
-        <form>
-            <input type="text" placeholder="Enter email" class="footer__input" />
-            <button class="btn footer__btn">Submit</button>
-        </form>
-    </div>
-</footer>
-<?php require_once "includes/header.php"; ?>
+<?php require_once "includes/footer.php"; ?>

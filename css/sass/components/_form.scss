@@ -1,20 +1,27 @@
 /* form design | starts here */
 .form {
 	&__row {
-		margin-block: 3rem;
+		margin-block: var(--size-3);
 		display: flex;
 		flex-direction: column;
 		gap: 10px;
 
+		&--container {
+			display: flex;
+			justify-content: space-between;
+			gap: 20px;
+		}
+
 		input,
 		textarea {
-			padding: 2rem 2rem;
-			border: 1px solid var(--border-clr);
+			padding: var(--size-3);
+			border: var(--border-size-1) solid var(--gray-1);
 			outline: none;
+			box-shadow: var(--shadow-2);
+			border-radius: var(--radius-2);
 
 			&:focus {
-				outline: 2px solid var(--outline-clr);
-				box-shadow: var(--shadow-1);
+				outline: 0.5px solid var(--orange-6);
 			}
 		}
 
@@ -23,16 +30,12 @@
 			width: 100%;
 		}
 
-		textarea {
-			border-radius: 5px;
-		}
-
 		&--label {
-			margin-bottom: 0.2rem;
-			font-size: 2rem;
-			background-color: var(--white-clr);
+			margin-bottom: var(--size-2);
+			font-size: var(--font-size-2);
 			background-color: transparent;
 			width: max-content;
+			color: var(--gray-8);
 		}
 
 		&--image {
@@ -46,18 +49,27 @@
 
 			img {
 				width: 100%;
-				// height: 100%;
 				aspect-ratio: 10 / 9;
 				object-fit: cover;
 			}
 		}
 
 		&--img {
-			background-color: var(--white-clr);
+			background-color: white;
 		}
 
 		&--imgCurrent {
 			width: 50%;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		&--row {
+			display: flex;
 		}
 	}
 }

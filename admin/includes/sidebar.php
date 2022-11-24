@@ -1,11 +1,11 @@
 <nav class="admin__nav">
-    <div class="admin__humbuger">
+    <!-- <div class="admin__humbuger">
         <button class="admin__humbuger--btn">
             <span class="admin__humbuger--bar1"></span>
             <span class="admin__humbuger--bar2"></span>
             <span class="admin__humbuger--bar3"></span>
         </button>
-    </div>
+    </div> -->
 
     <ul>
         <li class="admin__nav--item active">
@@ -17,7 +17,7 @@
         </li>
 
         <li class="admin__nav--item">
-            <a href="create_article.php"><em class="fa-solid fa-writer"></em></a>
+            <a href="add_book.php"><em class="fa-solid fa-writer"></em></a>
         </li>
 
         <li class="admin__nav--item">

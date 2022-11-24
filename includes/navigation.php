@@ -1,7 +1,6 @@
-    <section class="hero">
-        <div class="hero__image"></div>
 
-        <div class="hero__main">
+
+        
             <header>
                 <h1>Book Share</h1>
 
@@ -14,6 +13,8 @@
 
                 <div class="cta">
                     <a href="">Login</a>
-                    <a href="login.php" class="signup__btn">signup</a>
+                    <a href="login.php" class="signup__btn">Signup</a>
                 </div>
             </header>
+
+

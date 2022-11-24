@@ -5,12 +5,12 @@
 	--background-hover: rgb(121, 213, 199);
 	--comp-color: blue;
 	--card-color: rgba(255, 255, 255, 0.119);
-	--shadow-1: 1px 2px 15px rgba(135, 135, 135, 0.133),
-		1px 2px 15px rgba(65, 65, 65, 0.263);
-	--shadow-2: 0px 15px 15px rgba(135, 135, 135, 0.133),
-		0 5px 25px rgba(65, 65, 65, 0.089);
+	// --shadow-1: 1px 2px 15px rgba(135, 135, 135, 0.133),
+	// 	1px 2px 15px rgba(65, 65, 65, 0.263);
+	// --shadow-2: 0px 15px 15px rgba(135, 135, 135, 0.133),
+	// 	0 5px 25px rgba(65, 65, 65, 0.089);
 
-	--background-color: aliceblue;
+	--background-color: var(--gray-1);
 	--color-gredient: linear-gradient(to right, #8041f2, #3095ed);
 	--border: rgba(0, 0, 0, 0.29);
 	--modal-color: rgba(0, 0, 0, 0.023);
@@ -37,5 +37,4 @@
 	--background-bm: #3095ed1e;
 
 	// btn radius
-	
 }
