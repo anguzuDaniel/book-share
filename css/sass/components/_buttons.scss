@@ -1,6 +1,14 @@
 .btn {
 	cursor: pointer;
 	border: none;
+	background-color: var(--orange-6);
+	color: white;
+	padding: 0.5rem 0.8rem;
+	text-shadow: 0 1px 0 var(--orange-6);
+
+	&:hover {
+		background-color: var(--orange-5);
+	}
 
 	&__control {
 		width: 100%;
@@ -41,9 +49,14 @@
 }
 
 .signup__btn {
-	background-color: rgb(217, 141, 0);
+	background-color: var(--orange-6);
 	color: white;
 	padding: 0.5rem 0.8rem;
+	text-shadow: 0 1px 0 var(--orange-6);
+
+	&:hover {
+		background-color: var(--orange-5);
+	}
 }
 
 .hero__btn {
@@ -52,6 +65,23 @@
 	cursor: pointer;
 	border-top-right-radius: var(--size-1);
 	border-bottom-right-radius: var(--size-1);
-	background-color: rgb(217, 141, 0);
+	background-color: var(--orange-6);
+	text-shadow: 0 1px 0 var(--orange-6);
+
 	color: white;
+
+	&:hover {
+		background-color: var(--orange-5);
+	}
+}
+
+.slide--btns {
+	.btn {
+		background-color: transparent;
+		color: var(--orange-6);
+
+		&:hover {
+			color: var(--orange-5);
+		}
+	}
 }

@@ -1,0 +1,66 @@
+.user {
+	position: relative;
+
+	&__review {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		padding: var(--size-9);
+		position: absolute;
+		top: 0;
+		width: 100%;
+		z-index: 2;
+		background-color: rgba(0, 0, 0, 0.697);
+		height: 100%;
+		padding-inline: var(--size-9);
+	}
+
+	&__image {
+		background-color: transparent;
+		height: 80vh;
+		background-image: url(../images/hero.jpg);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-blend-mode: darken;
+		filter: blur(1px);
+		-webkit-filter: blur(1px);
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+		width: 500px;
+
+		input,
+		textarea {
+			width: 100%;
+			padding: var(--size-2) var(--size-1);
+			border: none;
+			outline: none;
+
+			&:active,
+			&:focus {
+				outline: 2px solid var(--orange-6);
+				box-shadow: var(--shadow-9);
+			}
+		}
+
+		textarea {
+			height: 60px;
+		}
+
+		&--row {
+			display: flex;
+			gap: 10px;
+		}
+	}
+
+	h1 {
+		color: white;
+	}
+}

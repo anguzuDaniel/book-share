@@ -1,0 +1,33 @@
+.footer {
+	padding: var(--size-9) var(--size-9);
+	display: flex;
+	justify-content: space-between;
+
+	nav {
+		li {
+			list-style: none;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__cta {
+		h1 {
+			margin-bottom: var(--size-6);
+		}
+	}
+
+	form {
+		display: flex;
+
+		input {
+			padding: var(--size-2) var(--size-1);
+			width: 350px;
+		}
+
+		button {
+			transform: translateX(-2px);
+		}
+	}
+}

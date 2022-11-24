@@ -5,7 +5,7 @@
             <header>
                 <h1>Book Share</h1>
 
-                <nav>
+                <nav class="navigation__list">
                     <a href="">All books</a>
                     <a href="">Education</a>
                     <a href="">Thriller</a>
