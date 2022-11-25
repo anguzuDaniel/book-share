@@ -72,12 +72,12 @@ $categories = getAllCategories($conn);
                                     <td><?= substr($book['description'], 0, 10); ?>..</td>
                                     <td><?= $book['category']; ?></td>
                                     <td>
-                                        <a href="#" class="edit__icon">
+                                        <a href="edit_book.php?id=<?= $book['id']; ?>" class="edit__icon">
                                             <em class="fa-regular fa-pen-to-square"></em>
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="#" class="delete__icon">
+                                        <a href="delete_book.php?id=<?= $book['id']; ?>" class="delete__icon">
                                             <em class="fa-regular fa-trash-can"></em>
                                         </a>
                                     </td>

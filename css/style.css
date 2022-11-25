@@ -357,6 +357,7 @@ header {
   padding: 1rem var(--size-9);
   color: white;
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 999999999999999;
 }
@@ -386,9 +387,18 @@ header a:hover {
 }
 
 .scroll {
-  background-color: white;
+  background-color: var(--gray-1);
   border-bottom: 1px solid rgba(128, 128, 128, 0.222);
   z-index: 999;
+}
+.scroll nav a {
+  color: var(--gray-7);
+}
+.scroll h1 {
+  color: var(--gray-7);
+}
+.scroll .login__btn {
+  color: var(--orange-9);
 }
 
 .footer {
@@ -398,6 +408,7 @@ header a:hover {
   justify-content: space-between;
   align-items: center;
   gap: 40px;
+  background-color: var(--gray-7);
 }
 .footer nav li {
   list-style: none;
@@ -664,6 +675,7 @@ aside {
 .about {
   height: 80vh;
   position: relative;
+  z-index: 1;
 }
 .about h1,
 .about p {
@@ -765,6 +777,7 @@ aside {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
 }
 .reviews .slide--btns #left--btn,
 .reviews .slide--btns #right--btn {
@@ -794,7 +807,7 @@ aside {
   position: absolute;
   top: 0;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.697);
   height: 100%;
   padding-inline: var(--size-9);
@@ -1059,7 +1072,7 @@ aside {
   transition: all 0.2s ease-in-out;
 }
 .admin__content {
-  margin-top: 3rem;
+  margin-top: 5rem;
   margin-bottom: 3rem;
   margin-inline: 2.25rem;
   margin-inline: 4rem;

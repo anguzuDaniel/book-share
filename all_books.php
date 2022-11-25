@@ -1,6 +1,5 @@
 <?php require_once "includes/header.php"; ?>
 
-<?php require_once "includes/navigation.php"; ?>
 <?php
 
 $conn = getConn();
@@ -11,6 +10,7 @@ $categories = getAllCategories($conn);
 
 $count = 0;
 ?>
+<?php require_once "includes/navigation.php"; ?>
 
 <section class="all_books">
 

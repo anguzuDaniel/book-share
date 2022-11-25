@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * getAllBooks
+ *
+ * @param  mixed $conn
+ * @param  mixed $column
+ * @return array
+ */
 function getAllBooks($conn, $column = '*')
 {
     $sql = "SELECT $column FROM book";
@@ -11,6 +18,36 @@ function getAllBooks($conn, $column = '*')
     }
 }
 
+/**
+ * getBookById
+ *
+ * @param  mixed $conn
+ * @param  mixed $id
+ * @param  mixed $column
+ * @return void
+ */
+function getBookById($conn, $id, $column = '*')
+{
+    $sql = "SELECT $column FROM book WHERE id = :id";
+
+    $stmt = $conn->prepare($sql);
+
+    $stmt->bindParam(':id', $id);
+
+    if ($stmt->execute()) {
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        return $stmt->fetchAll();
+    }
+}
+
+/**
+ * getBooksLimit
+ *
+ * @param  mixed $conn
+ * @param  mixed $limit
+ * @param  mixed $columns
+ * @return void
+ */
 function getBooksLimit($conn, $limit, $columns = "*")
 {
     $sql = "SELECT $columns FROM book ORDER BY id DESC LIMIT $limit ";
@@ -22,6 +59,13 @@ function getBooksLimit($conn, $limit, $columns = "*")
     }
 }
 
+/**
+ * getAllCategories
+ *
+ * @param  mixed $conn
+ * @param  mixed $columns
+ * @return array
+ */
 function getAllCategories($conn, $columns = "*")
 {
     $sql = "SELECT $columns FROM category ORDER BY name DESC ";
@@ -33,6 +77,18 @@ function getAllCategories($conn, $columns = "*")
     }
 }
 
+/**
+ * addBook
+ *
+ * @param  mixed $conn
+ * @param  mixed $name
+ * @param  mixed $author
+ * @param  mixed $image
+ * @param  mixed $file
+ * @param  mixed $description
+ * @param  mixed $category
+ * @return void
+ */
 function addBook($conn, $name, $author, $image, $file, $description, $category)
 {
     $sql = "INSERT INTO book(name, author, image, file, description, category) 
@@ -51,6 +107,17 @@ function addBook($conn, $name, $author, $image, $file, $description, $category)
 }
 
 
+/**
+ * formValidation
+ * 
+ * @param  mixed $name
+ * @param  mixed $author
+ * @param  mixed $image
+ * @param  mixed $files
+ * @param  mixed $description
+ * @param  mixed $category
+ * @return void
+ */
 function formValidation($name, $author, $image, $files, $description, $category)
 {
 

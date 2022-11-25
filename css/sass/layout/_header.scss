@@ -5,6 +5,7 @@ header {
 	padding: 1rem var(--size-9);
 	color: white;
 	position: fixed;
+	top: 0;
 	width: 100%;
 	z-index: 999999999999999;
 
@@ -38,7 +39,21 @@ header {
 }
 
 .scroll {
-	background-color: white;
+	background-color: var(--gray-1);
 	border-bottom: 1px solid rgba(128, 128, 128, 0.222);
 	z-index: 999;
+
+	nav {
+		a {
+			color: var(--gray-7);
+		}
+	}
+
+	h1 {
+		color: var(--gray-7);
+	}
+
+	.login__btn {
+		color: var(--orange-9);
+	}
 }
