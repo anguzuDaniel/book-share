@@ -5,6 +5,7 @@
 	color: white;
 	padding: 0.5rem 0.8rem;
 	text-shadow: 0 1px 0 var(--orange-6);
+	border-radius: var(--radius-2);
 
 	&:hover {
 		background-color: var(--orange-5);
@@ -54,6 +55,7 @@
 	padding: 0.5rem 0.8rem;
 	text-shadow: 0 1px 0 var(--orange-6);
 	text-transform: capitalize;
+	border-radius: var(--radius-2);
 
 	&:hover {
 		background-color: var(--orange-5);

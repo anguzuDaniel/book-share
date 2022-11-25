@@ -7,7 +7,9 @@
 
     </aside>
 
-    <section class="a"></section>
+    <section class="a">
+        
+    </section>
 </main>
 
 <?php require_once "includes/footer.php"; ?>

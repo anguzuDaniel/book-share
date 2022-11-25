@@ -93,6 +93,7 @@ p {
   color: white;
   padding: 0.5rem 0.8rem;
   text-shadow: 0 1px 0 var(--orange-6);
+  border-radius: var(--radius-2);
 }
 .btn:hover {
   background-color: var(--orange-5);
@@ -136,6 +137,7 @@ p {
   padding: 0.5rem 0.8rem;
   text-shadow: 0 1px 0 var(--orange-6);
   text-transform: capitalize;
+  border-radius: var(--radius-2);
 }
 .signup__btn:hover {
   background-color: var(--orange-5);
@@ -313,6 +315,40 @@ table tbody tr:nth-child(odd) {
   background-color: var(--hover-bg);
   cursor: pointer;
 }
+.navigation__secondary {
+  padding-block: var(--size-4);
+  box-shadow: var(--shadow-1);
+  border-bottom: var(--border-size-1) solid var(--gray-5);
+}
+.navigation__secondary ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.navigation__secondary ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 10px;
+  border-right: var(--border-size-1) solid var(--gray-5);
+  padding-inline: 1rem;
+}
+.navigation__secondary ul li:is(:last-child) {
+  border: none;
+}
+.navigation__secondary ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.logo {
+  font-size: 1.3rem;
+}
+.logo span {
+  color: var(--orange-6);
+}
 
 header {
   display: flex;
@@ -320,6 +356,9 @@ header {
   align-items: center;
   padding: 1rem var(--size-9);
   color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 999999999999999;
 }
 header nav {
   display: flex;
@@ -346,10 +385,19 @@ header a:hover {
   color: var(--clr-primary);
 }
 
+.scroll {
+  background-color: white;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.222);
+  z-index: 999;
+}
+
 .footer {
-  padding: var(--size-9) var(--size-9);
+  padding: var(--size-9) var(--size-8);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  gap: 40px;
 }
 .footer nav li {
   list-style: none;
@@ -369,6 +417,9 @@ header a:hover {
 }
 .footer form button {
   transform: translateX(-2px);
+}
+.footer__copyright p {
+  font-size: 0.8rem;
 }
 
 /* side navigation style start | home page */
@@ -500,8 +551,6 @@ aside {
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: darken;
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
 }
 .hero__container {
   display: flex;
@@ -528,7 +577,7 @@ aside {
 }
 .hero__search {
   width: 500px;
-  padding: 0.4rem 0.25rem;
+  padding: var(--size-2) var(--size-3);
 }
 .hero__search {
   display: flex;
@@ -609,7 +658,7 @@ aside {
   font-size: 0.8rem;
 }
 .book__download {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .about {
@@ -631,8 +680,6 @@ aside {
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: darken;
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
 }
 .about__text {
   background-color: rgba(0, 0, 0, 0.697);
@@ -650,9 +697,10 @@ aside {
 }
 
 .reviews {
-  margin: var(--size-9) var(--size-9);
+  margin-block: var(--size-9);
   display: grid;
   place-items: center;
+  overflow: hidden;
 }
 .reviews .review--slider {
   display: flex;
@@ -686,6 +734,8 @@ aside {
   margin-bottom: 0.5rem;
   color: var(--primary-color);
   font-weight: lighter;
+  font-size: 1rem;
+  color: var(--orange-6);
 }
 .reviews__cards .card__description__name h3 {
   font-weight: bold;
@@ -758,8 +808,6 @@ aside {
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: darken;
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
 }
 .user__form {
   display: flex;
@@ -1192,6 +1240,7 @@ aside {
   display: flex;
   margin-inline: var(--size-9);
   margin-block: var(--size-9);
+  gap: 40px;
 }
 .all_books .book {
   margin: 0;
@@ -1225,6 +1274,7 @@ aside {
 }
 .all_books aside ul li a {
   font-size: 1rem;
+  text-decoration: none;
 }
 
 /* the props */

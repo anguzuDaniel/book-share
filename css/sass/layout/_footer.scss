@@ -1,7 +1,10 @@
 .footer {
-	padding: var(--size-9) var(--size-9);
+	padding: var(--size-9) var(--size-8);
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
+	align-items: center;
+	gap: 40px;
 
 	nav {
 		li {
@@ -28,6 +31,12 @@
 
 		button {
 			transform: translateX(-2px);
+		}
+	}
+
+	&__copyright {
+		p {
+			font-size: 0.8rem;
 		}
 	}
 }

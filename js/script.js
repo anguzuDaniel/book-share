@@ -1,5 +1,6 @@
 "use strict";
 
+const scrollEffect = document.querySelector(".scrollEffect");
 const showSignupBtn = document.getElementById("showSignup");
 const showLoginbtn = document.getElementById("showLogin");
 const signupForm = document.querySelector(".form__signup");
@@ -9,6 +10,20 @@ const loginBtn = document.getElementById("loginBtn");
 const rightBtn = document.getElementById("right--btn");
 const leftBtn = document.getElementById("left--btn");
 const reviewCards = document.querySelectorAll(".reviews__cards");
+
+/** functions */
+// adds white background to header when scrolling down
+window.onscroll = function () {
+	let top = window.scrollY;
+
+	// checks if top is greater or equal to 164
+	// add if codition is true else remove
+	if (top < 164) {
+		scrollEffect.classList.remove("scroll");
+	} else {
+		scrollEffect.classList.add("scroll");
+	}
+};
 
 showSignupBtn.addEventListener("click", (e) => {
 	e.preventDefault();

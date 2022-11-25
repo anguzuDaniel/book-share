@@ -6,6 +6,11 @@ $conn = getConn();
 
 $books = getBooksLimit($conn, 6);
 
+$categories = getAllCategories($conn);
+
+$count = 0;
+
+
 ?>
 
 <main>
@@ -24,6 +29,16 @@ $books = getBooksLimit($conn, 6);
         </div>
     </section>
 
+    <nav class="navigation__secondary">
+        <ul>
+            <?php foreach ($categories as $category) : ?>
+                <li>
+                    <a href=""><?= $category['name']; ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </nav>
+
     <!-- book section | start -->
     <section class="book">
         <h1 class="book--title">Best Sellers</h1>
@@ -32,7 +47,7 @@ $books = getBooksLimit($conn, 6);
             <?php require_once "includes/books.php"; ?>
         </div>
 
-        <p class="book__more"><a href="#">More books</a></p>
+        <p class="book__more"><a href="all_books.php">More books</a></p>
     </section>
     <!-- book section | start -->
 
@@ -47,165 +62,9 @@ $books = getBooksLimit($conn, 6);
     <!-- About section | start -->
 
 
-    <!-- sliding cards section -->
-    <section class="reviews sliding--cards section--hidden section" id="projects">
-        <div class="review--slider">
-            <div class="reviews__cards review--slide--active reviews__card--1">
-                <article class="card">
-
-                    <div class="card__description">
-
-                        <img src="images/images (43).jpeg" alt="" srcset="" class="review--img" />
-                        <div class="card__description__name">
-                            <div class="star">
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star"></em>
-                            </div>
-                            <h3>Anguzu Daniel</h3>
-                        </div>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Voluptates tenetur quo est rem beatae, rerum, voluptas facere
-                        expedita commodi eum.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <div class="card__description">
-
-                        <img src="images/images (1).png" alt="" srcset="" class="review--img" />
-                        <div class="card__description__name">
-                            <div class="star">
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star-half-stroke"></em>
-                                <em class="fa fa-star-half-stroke"></em>
-                            </div>
-                            <h3>Kenyi Jonathan</h3>
-                        </div>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Voluptates tenetur quo est rem beatae, rerum, voluptas facere
-                        expedita commodi eum.
-                    </p>
-                </article>
-            </div>
-
-            <div class="reviews__cards reviews__card--2">
-                <article class="card">
-                    <div class="card__description">
-
-                        <img src="images/images (70).jpeg" alt="" srcset="" class="review--img" />
-                        <div class="card__description__name">
-                            <div class="star">
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star-half-stroke"></em>
-                            </div>
-                            <h3>Jackson Paul</h3>
-                        </div>
-                    </div>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Voluptates tenetur quo est rem beatae, rerum, voluptas facere
-                        expedita commodi eum.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <div class="card__description">
-
-                        <img src="images/images (69).jpeg" alt="" srcset="" class="review--img" />
-                        <div class="card__description__name">
-                            <div class="star">
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star"></em>
-                                <em class="fa fa-star-half-stroke"></em>
-                                <em class="fa fa-star-half-stroke"></em>
-                            </div>
-                            <h3>Opio Danson</h3>
-                        </div>
-                    </div>
-
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                        Voluptates tenetur quo est rem beatae, rerum, voluptas facere
-                        expedita commodi eum.
-                    </p>
-                </article>
-            </div>
-        </div>
-
-        <div class="reviews__cards reviews__card--3">
-            <article class="card">
-                <div class="card__description">
-
-                    <img src="images/images (91).jpeg" alt="" srcset="" class="review--img" />
-                    <div class="card__description__name">
-                        <div class="star">
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                        </div>
-                        <h3>Linda Zani</h3>
-                    </div>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Voluptates tenetur quo est rem beatae, rerum, voluptas facere
-                    expedita commodi eum.
-                </p>
-            </article>
-
-
-            <article class="card">
-                <div class="card__description">
-
-                    <img src="images/download (2).jpeg" alt="" srcset="" class="review--img" />
-                    <div class="card__description__name">
-                        <div class="star">
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                        </div>
-                        <h3>Nandi Zape</h3>
-                    </div>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Voluptates tenetur quo est rem beatae, rerum, voluptas facere
-                    expedita commodi eum.
-                </p>
-            </article>
-        </div>
-        </div>
-
-        <div class="slide--btns">
-            <div class="left--btn btn">
-                <button id="left--btn">
-                    <em class="fa fa-arrow-left"></em>
-                </button>
-            </div>
-            <div class="right--btn btn">
-                <button id="right--btn">
-                    <em class="fa fa-arrow-right"></em>
-                </button>
-            </div>
-        </div>
-    </section>
+    <!-- review carousel | start -->
+    <?php include_once "includes/review.php"; ?>
+    <!-- review carousel | end -->
 
     <section class="user">
         <div class=" user__image">

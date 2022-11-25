@@ -4,6 +4,9 @@ header {
 	align-items: center;
 	padding: 1rem var(--size-9);
 	color: white;
+	position: fixed;
+	width: 100%;
+	z-index: 999999999999999;
 
 	nav {
 		display: flex;
@@ -32,4 +35,10 @@ header {
 			color: var(--clr-primary);
 		}
 	}
+}
+
+.scroll {
+	background-color: white;
+	border-bottom: 1px solid rgba(128, 128, 128, 0.222);
+	z-index: 999;
 }

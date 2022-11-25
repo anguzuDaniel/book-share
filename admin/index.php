@@ -1,5 +1,12 @@
 <?php
 require_once "includes/header.php";
+
+$conn = getConn();
+
+$books = getAllBooks($conn);
+
+$categories = getAllCategories($conn);
+
 ?>
 
 <?php include_once "includes/sidebar.php" ?>
@@ -19,24 +26,16 @@ require_once "includes/header.php";
                         <div class="admin__card--icon">
                             <em class="fa-regular fa-folder-open"></em>
                         </div>
-                        <p class="admin__card--num">356</p>
-                        <h3 class="admin__card--heading">Arctiles</h1>
+                        <p class="admin__card--num"><?php echo count($books); ?></p>
+                        <h3 class="admin__card--heading">Book</h1>
                     </div>
 
                     <div class="admin__card admin__card--categories">
                         <div class="admin__card--icon">
                             <em class="fa-solid fa-diagram-project"></em>
                         </div>
-                        <p class="admin__card--num">10</p>
+                        <p class="admin__card--num"><?php echo count($categories); ?></p>
                         <h3 class="admin__card--heading">Categories</h1>
-                    </div>
-
-                    <div class="admin__card admin__card--writers">
-                        <div class="admin__card--icon">
-                            <em class="fa-solid fa-file-pen"></em>
-                        </div>
-                        <p class="admin__card--num">6</p>
-                        <h3 class="admin__card--heading">Writers</h1>
                     </div>
 
                     <div class="admin__card admin__card--vistors">
@@ -53,109 +52,39 @@ require_once "includes/header.php";
                     <table>
                         <thead>
                             <tr>
-                                <td>
-                                    <input type="checkbox" name="select__writer" id="">
-                                </td>
-                                <td>id</td>
                                 <td>Name</td>
-                                <td>Number post</td>
+                                <td>Author</td>
+                                <td>Image</td>
+                                <td>File</td>
+                                <td>Description</td>
+                                <td>Category</td>
                                 <td colspan="2">Action</td>
                             </tr>
                         </thead>
 
                         <tbody>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" name="select__writer" id="">
-                                </td>
-                                <td>1</td>
-                                <td>Chima Titilayo</td>
-                                <td>40</td>
-                                <td>
-                                    <a href="#" class="edit__icon">
-                                        <em class="fa-regular fa-pen-to-square"></em>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#" class="delete__icon">
-                                        <em class="fa-regular fa-trash-can"></em>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" name="select__writer" id="">
-                                </td>
-                                <td>2</td>
-                                <td>Kehinde Mandlenkosi</td>
-                                <td>50</td>
-                                <td>
-                                    <a href="#" class="edit__icon">
-                                        <em class="fa-regular fa-pen-to-square"></em>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#" class="delete__icon">
-                                        <em class="fa-regular fa-trash-can"></em>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" name="select__writer" id="">
-                                </td>
-                                <td>3</td>
-                                <td>Kossi Adenike</td>
-                                <td>30</td>
-                                <td>
-                                    <a href="#" class="edit__icon">
-                                        <em class="fa-regular fa-pen-to-square"></em>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#" class="delete__icon">
-                                        <em class="fa-regular fa-trash-can"></em>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" name="select__writer" id="">
-                                </td>
-                                <td>4</td>
-                                <td>Kelly Opan</td>
-                                <td>500</td>
-                                <td>
-                                    <a href="#" class="edit__icon">
-                                        <em class="fa-regular fa-pen-to-square"></em>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#" class="delete__icon">
-                                        <em class="fa-regular fa-trash-can"></em>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <input type="checkbox" name="select__writer" id="">
-                                </td>
-                                <td>5</td>
-                                <td>Aishatu Amara</td>
-                                <td>200</td>
-                                <td>
-                                    <a href="#" class="edit__icon">
-                                        <i class="fa-regular fa-pen-to-square"></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a href="#" class="delete__icon">
-                                        <i class="fa-regular fa-trash-can"></i>
-                                    </a>
-                                </td>
-                            </tr>
-
+                            <?php foreach ($books as $book) : ?>
+                                <tr>
+                                    <td><?= substr($book['name'], 0, 5); ?>..</td>
+                                    <td><?= substr($book['author'], 0, 6); ?>..</td>
+                                    <td><?= $book['image']; ?></td>
+                                    <td><?= $book['file']; ?></td>
+                                    <td><?= substr($book['description'], 0, 10); ?>..</td>
+                                    <td><?= $book['category']; ?></td>
+                                    <td>
+                                        <a href="#" class="edit__icon">
+                                            <em class="fa-regular fa-pen-to-square"></em>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="delete__icon">
+                                            <em class="fa-regular fa-trash-can"></em>
+                                        </a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
                     </table>
+
                 </div>
             </div>
 
