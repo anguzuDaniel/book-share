@@ -178,7 +178,8 @@ p {
   gap: 20px;
 }
 .form__row input,
-.form__row textarea {
+.form__row textarea,
+.form__row select {
   padding: var(--size-3);
   border: var(--border-size-1) solid var(--gray-1);
   outline: none;
@@ -186,8 +187,9 @@ p {
   border-radius: var(--radius-2);
 }
 .form__row input:focus,
-.form__row textarea:focus {
-  outline: 0.5px solid var(--orange-6);
+.form__row textarea:focus,
+.form__row select:focus {
+  outline: 1px solid var(--gray-8);
 }
 .form__row input,
 .form__row textarea {
@@ -350,7 +352,26 @@ table tbody tr:nth-child(odd) {
   color: var(--orange-6);
 }
 
-header {
+.dropdown {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 200px;
+  background-color: var(--white-clr);
+  text-align: center;
+  box-shadow: var(--shadow-1);
+  display: none;
+  z-index: 9999999999;
+}
+.dropdown__item {
+  padding: 1rem;
+  font-size: 1.4rem;
+}
+.dropdown__item:not(:last-child) {
+  border-bottom: 1px solid var(--border-clr);
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -361,14 +382,14 @@ header {
   width: 100%;
   z-index: 999999999999999;
 }
-header nav {
+.header nav {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   font-size: 1rem;
 }
-header .cta {
+.header .cta {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -376,13 +397,13 @@ header .cta {
   font-size: 0.8rem;
   text-transform: uppercase;
 }
-header a {
+.header a {
   text-decoration: none;
   color: white;
   border-bottom: 1px solid transparent;
   transition: all 0.2s ease-in-out;
 }
-header a:hover {
+.header a:hover {
   color: var(--clr-primary);
 }
 
@@ -408,7 +429,7 @@ header a:hover {
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-  background-color: var(--gray-7);
+  background-color: var(--gray-6);
 }
 .footer nav li {
   list-style: none;
@@ -988,7 +1009,9 @@ aside {
   align-items: center;
   gap: 2px;
   border: none;
-  background-color: var(--white-clr);
+  background-color: transparent;
+  margin-left: auto;
+  color: var(--orange-9);
 }
 .admin__user--btn em {
   cursor: pointer;
@@ -1000,10 +1023,14 @@ aside {
   margin-block: var(--);
 }
 .admin__header {
+  padding: var(--size-3) var(--size-9);
   width: 100%;
   margin-inline: 0;
   border-bottom: var(--border-size-1) solid var(--gray-1);
   background-color: white;
+}
+.admin__header a {
+  color: var(--orange-9);
 }
 .admin__primary {
   padding-block: var(--size-1);
@@ -1012,6 +1039,7 @@ aside {
   justify-content: space-between;
   padding-inline: var(--size-1);
   background-color: var(--white-clr);
+  width: 100%;
 }
 .admin__secondary {
   width: 100%;
@@ -1072,8 +1100,8 @@ aside {
   transition: all 0.2s ease-in-out;
 }
 .admin__content {
-  margin-top: 5rem;
-  margin-bottom: 3rem;
+  margin-top: var(--size-3);
+  margin-bottom: var(--size-3);
   margin-inline: 2.25rem;
   margin-inline: 4rem;
 }

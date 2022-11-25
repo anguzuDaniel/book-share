@@ -13,7 +13,8 @@
 		}
 
 		input,
-		textarea {
+		textarea,
+		select {
 			padding: var(--size-3);
 			border: var(--border-size-1) solid var(--gray-1);
 			outline: none;
@@ -21,7 +22,7 @@
 			border-radius: var(--radius-2);
 
 			&:focus {
-				outline: 0.5px solid var(--orange-6);
+				outline: 1px solid var(--gray-8);
 			}
 		}
 

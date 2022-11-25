@@ -24,7 +24,9 @@
 			align-items: center;
 			gap: 2px;
 			border: none;
-			background-color: var(--white-clr);
+			background-color: transparent;
+			margin-left: auto;
+			color: var(--orange-9);
 
 			em {
 				cursor: pointer;
@@ -42,10 +44,15 @@
 	}
 
 	&__header {
+		padding: var(--size-3) var(--size-9);
 		width: 100%;
 		margin-inline: 0;
 		border-bottom: var(--border-size-1) solid var(--gray-1);
 		background-color: white;
+
+		a {
+			color: var(--orange-9);
+		}
 	}
 
 	&__primary {
@@ -55,6 +62,7 @@
 		justify-content: space-between;
 		padding-inline: var(--size-1);
 		background-color: var(--white-clr);
+		width: 100%;
 	}
 
 	&__secondary {
@@ -128,8 +136,8 @@
 	// Admin sidebar navigation | ends here
 
 	&__content {
-		margin-top: 5rem;
-		margin-bottom: 3rem;
+		margin-top: var(--size-3);
+		margin-bottom: var(--size-3);
 		margin-inline: 2.25rem;
 		margin-inline: 4rem;
 
@@ -323,7 +331,6 @@
 	&__humbuger {
 		border-bottom: 1px solid var(--clr-compilment-text);
 		display: flex;
-		// flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		padding-bottom: 2.25rem;

@@ -1,4 +1,4 @@
-<header class="scrollEffect">
+<header class="scrollEffect header">
     <h1 class="logo">Book<span>Share</span></h1>
 
     <nav class="navigation__list">

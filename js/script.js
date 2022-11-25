@@ -10,6 +10,7 @@ const loginBtn = document.getElementById("loginBtn");
 const rightBtn = document.getElementById("right--btn");
 const leftBtn = document.getElementById("left--btn");
 const reviewCards = document.querySelectorAll(".reviews__cards");
+const userDropdownBtn = document.querySelector(".admin__content--user");
 
 /** functions */
 // adds white background to header when scrolling down
@@ -89,6 +90,12 @@ const cardSlider = function () {
 	leftBtn.addEventListener("click", prevCard);
 };
 cardSlider();
+
+userDropdownBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+	dropdown.style.display = "block";
+	console.log("clicked!!");
+});
 
 // smooth scroll for links
 document
