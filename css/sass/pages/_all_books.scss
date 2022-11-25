@@ -6,12 +6,58 @@
 
 	.book {
 		margin: 0;
+		width: max(100%, 2000px);
 
 		&__wrapper {
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
 			gap: 20px;
 			row-gap: 55px;
+
+			article {
+				display: flex;
+				flex-direction: column;
+				border: 1px solid var(--border);
+				box-shadow: var(--shadow-0);
+				border-radius: var(--radius-2);
+				padding: 0;
+				gap: 20px;
+			}
+		}
+
+		&__description {
+			padding: var(--size-4);
+		}
+
+		&__btn {
+			width: 100%;
+			text-align: center;
+
+			&--wrapper {
+				display: flex;
+				gap: 20px;
+			}
+		}
+
+		&__image {
+			border: var(--shadow-4);
+			transform: translateY(0);
+			box-shadow: var(--shadow-3);
+			overflow: hidden;
+			cursor: pointer;
+			width: 100%;
+			height: 80%;
+
+			img {
+				aspect-ratio: var(--ratio-portrait);
+				width: 100%;
+				object-fit: cover;
+				transition: all 0.3s ease-in-out;
+
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
 		}
 	}
 

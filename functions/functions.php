@@ -40,6 +40,38 @@ function getBookById($conn, $id, $column = '*')
     }
 }
 
+function updateBook($conn, $id, $name, $author, $image, $file, $description, $category)
+{
+    $sql = "UPDATE book SET 
+            name = :name, 
+            author = :author,  
+            image = :image, 
+            file = :file, 
+            description = :description, 
+            category = :category 
+            WHERE id = :id ";
+
+    $stmt = $conn->prepare($sql);
+
+    $stmt->bindParam(':id', $id);
+    $stmt->bindParam(':name', $name);
+    $stmt->bindParam(':author', $author);
+    $stmt->bindParam(':image', $image);
+    $stmt->bindParam(':file', $file);
+    $stmt->bindParam(':description', $description);
+    $stmt->bindParam(':category', $category);
+
+    $stmt->execute(array(
+        ':id' => $id,
+        ':name' => $name,
+        ':author' => $author,
+        ':image' => $image,
+        ':file' => $file,
+        ':description' => $description,
+        ':category' => $category
+    ));
+}
+
 /**
  * getBooksLimit
  *

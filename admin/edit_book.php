@@ -8,6 +8,52 @@ $id = $_GET['id'];
 
 if (isset($_GET['id'])) {
     $books = getBookById($conn, $id);
+
+    if (!$books) {
+        echo "Book not found!";
+    }
+} else {
+    echo "Book doesn't exist";
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+
+    $book_title = $_POST['book_title'];
+    $book_author = $_POST['book_author'];
+
+    // upload book cover/image
+    $book_cover = $_FILES['book_cover']['name'];
+    $temp_cover = $_FILES['book_cover']['tmp_name'];
+
+    // upload pdf/ book soft copy
+    $allowed = array('pdf');
+    $temp_file = explode('.', $_FILES['book_pdf']['name']);
+    $extension = end($temp_file);
+    $upload_pdf = $_FILES['book_pdf']['name'];
+
+    $book_description = $_POST['book_description'];
+    $book_category = $_POST['book_category'];
+
+    $errors = formValidation($conn, $book_title, $book_author, $book_cover, $book_description, $book_category);
+
+    if (empty($errors)) {
+        $stmt = updateBook($conn, $id, $book_title, $book_author, $book_cover, $upload_pdf, $book_description, $book_category);
+
+        move_uploaded_file($temp_cover, "../images/$book_cover");
+        move_uploaded_file($_FILES['book_pdf']['tmp_name'], "../uploads/pdf/$upload_pdf");
+
+
+        if ($stmt) {
+            $id = $_POST['id'];
+
+            header("Location: read_book.php");
+        } else {
+            $conn->errorInfo();
+        }
+    } else {
+        echo "Sorry, unable to update Book.";
+    }
 }
 
 ?>
