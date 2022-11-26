@@ -18,14 +18,6 @@ function getAllBooks($conn, $column = '*')
     }
 }
 
-/**
- * getBookById
- *
- * @param  mixed $conn
- * @param  mixed $id
- * @param  mixed $column
- * @return array
- */
 function getBookById($conn, $id, $column = '*')
 {
     $sql = "SELECT $column FROM book WHERE id = :id";

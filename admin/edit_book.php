@@ -17,10 +17,6 @@ if (isset($_GET['id'])) {
         $book_description = $book['description'];
         $book_category = $book['category'];
     }
-
-    if (!$books) {
-        echo "Book not found!";
-    }
 } else {
     echo "Book doesn't exist";
 }
@@ -80,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <?php if (!$id) : ?>
-                <h1>No book with that id found, please provide a valid id in the record.</h1>
+                <p> Sorry, no book with that id found. Please provide a valid book id.</p>
             <?php else : ?>
                 <?php require_once "includes/form.php"; ?>
             <?php endif; ?>

@@ -112,11 +112,13 @@ document
 		}
 	});
 
-deleteModalBtn.addEventListener("click", (e) => {
-	e.preventDefault();
-	let visiblity = deleteModal.getAttribute("data-modal");
-
-	if (visiblity === "false") {
-		deleteModal.setAttribute("data-modal", true);
-	}
+deleteModalBtn.forEach((btn) => {
+	btn.addEventListener("click", (e) => {
+		e.preventDefault();
+		if (deleteModal.classList.contains("show")) {
+			deleteModal.classList.remove("show");
+		} else {
+			deleteModal.classList.add("show");
+		}
+	});
 });

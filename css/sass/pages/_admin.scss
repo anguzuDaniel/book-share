@@ -39,12 +39,11 @@
 			text-decoration: none;
 			text-transform: uppercase;
 			font-weight: 600;
-			margin-block: var(--);
 		}
 	}
 
 	&__header {
-		padding: var(--size-3) var(--size-9);
+		padding: var(--size-3) var(--size-3);
 		width: 100%;
 		margin-inline: 0;
 		border-bottom: var(--border-size-1) solid var(--gray-1);
@@ -96,7 +95,6 @@
 	&__nav {
 		position: fixed;
 		top: 0;
-		bottom: -1;
 		width: 100px;
 		height: 100vh;
 		background-color: var(--gray-6);
@@ -138,8 +136,7 @@
 	&__content {
 		margin-top: var(--size-3);
 		margin-bottom: var(--size-3);
-		margin-inline: 2.25rem;
-		margin-inline: 4rem;
+		margin-inline: var(--size-5);
 
 		h1 {
 			margin-block: var(--size-4);
@@ -180,19 +177,24 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 		gap: 20px;
-		margin-bottom: 3rem;
+		margin-bottom: var(--size-3);
 	}
 
 	&__card {
 		text-align: center;
 		background-color: white;
-		border-radius: var(--radius-3);
-		border: var(--border-size-2) solid var(--gray-6);
-		padding: var(--size-4);
-		box-sizing: var(--shadow-1);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+		border-radius: var(--radius-2);
+		border: var(--border-size-1) solid var(--gray-1);
+		padding: var(--size-6);
+		box-shadow: var(--shadow-2);
+		border: 1px solid var(--gray-3);
 
 		&--icon {
-			font-size: 1.5rem;
+			font-size: var(--size-6);
 			color: rgb(196, 196, 196);
 
 			i {
@@ -206,13 +208,13 @@
 
 		&--num {
 			margin-block: var(--size-3);
-			font-size: var(--size-4);
-			color: var(--orange-9);
+			font-size: var(--size-7);
+			color: var(--orange-7);
 			font-weight: bold;
 		}
 
 		&--heading {
-			font-size: var(--size-4);
+			font-size: var(--size-3);
 		}
 	}
 

@@ -36,36 +36,39 @@
 	}
 
 	&__cards {
-		padding: var(--size-0);
+		padding: var(--size-4);
 		display: none;
 
 		.card {
 			border: 1px solid var(--border-color);
 			border-radius: 10px;
 			padding: var(--size-4);
+			width: min(700px, 500px);
 
 			&__description {
 				display: flex;
+				flex-direction: column;
 				gap: 20px;
 				place-items: center;
 				margin-bottom: 1rem;
 				padding-bottom: 1rem;
 				border-bottom: 1px solid var(--border-color);
 
-				&__name {
+				&--name {
 					text-align: left;
 
 					.star {
 						margin-bottom: 0.5rem;
 						color: var(--primary-color);
 						font-weight: lighter;
-						font-size: 1rem;
+						font-size: var(--size-3);
 						color: var(--orange-6);
 					}
 
 					h3 {
-						font-weight: bold;
 						color: var(--primary-color);
+						font-size: var(--size-3);
+						opacity: 0.8;
 					}
 				}
 

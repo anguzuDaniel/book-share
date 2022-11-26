@@ -1,6 +1,5 @@
+<?php include_once "includes/header.php"; ?>
 <?php
-require_once "includes/header.php";
-
 $conn = getConn();
 
 $books = getAllBooks($conn);
@@ -36,9 +35,6 @@ $categories = getAllCategories($conn);
 
                 </div>
             </div>
-
-            <?php include_once "includes/delete_modal.php"; ?>
-
         </section>
     </div>
 

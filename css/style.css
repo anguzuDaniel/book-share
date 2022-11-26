@@ -50,8 +50,6 @@ a {
 
 html {
   font-size: 100%;
-  --text-1: var(--gray-9);
-  --text-2: var(--gray-7);
 }
 @media (min-width: 600px) {
   html {
@@ -61,12 +59,6 @@ html {
 @media (min-width: 1000px) {
   html {
     font-size: 137.5%;
-  }
-}
-@media (--OSdark) {
-  html {
-    --text-1: var(--gray-1);
-    --text-2: var(--gray-2);
   }
 }
 
@@ -124,7 +116,6 @@ p {
   background: var(--color-gredient);
   background: var(--btn-clr);
   width: 100%;
-  padding-inline: var(--);
   padding-block: var(--padding-block);
   color: var(--clr-white);
   transition: all 0.3s ease-in-out;
@@ -264,34 +255,67 @@ p {
 table {
   border-collapse: collapse;
   background-color: white;
-  border: var(--border-1) solid var(--gray-1);
+  border: 1px solid var(--gray-3);
+  box-shadow: var(--shadow-2);
+  width: 100%;
+  font-size: var(--size-2);
 }
 table thead {
   background-color: var(--white-clr);
+  border: 1px solid var(--gray-3);
 }
 table thead tr td {
-  padding-block: var(--size-5);
+  padding-block: var(--size-4);
   padding-inline: var(--size-2);
   border-bottom: 1px solid var(--border-clr);
   transition: all 0.3s ease-in-out;
-  font-size: var(--size-3);
+  background-color: var(--gray-1);
+  border: 1px solid var(--gray-3);
 }
 table tbody tr td {
-  padding-block: var(--size-5);
+  padding-block: var(--size-2);
   border-bottom: 1px solid var(--border-clr);
-  padding-inline: var(--size-3);
-  font-size: var(--size-3);
+  padding-inline: var(--size-2);
+  border: 1px solid var(--gray-3);
+}
+table tbody tr td p img {
+  width: 50px;
 }
 table tbody tr td img {
   width: 100px;
 }
-table tbody tr:nth-child(odd) {
-  background-color: rgba(170, 195, 189, 0.0549019608);
+table tbody tr:nth-child(even) {
+  background-color: var(--gray-1);
 }
 
 .delete__icon {
-  padding: 1rem;
+  background-color: transparent;
+  border: none;
+  color: var(--red-9);
   cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+.delete__icon:hover {
+  transform: scaleX(1.2) scaleY(1.2);
+}
+.delete__icon:active {
+  transform: scaleX(0.8) scaleY(0.8);
+}
+
+.edit__icon {
+  background-color: transparent;
+  border: none;
+  color: var(--blue-5);
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s ease-in-out;
+}
+.edit__icon:hover {
+  transform: scaleX(1.2) scaleY(1.2);
+}
+.edit__icon:active {
+  transform: scaleX(0.8) scaleY(0.8);
 }
 
 .navigation__list {
@@ -746,35 +770,38 @@ aside {
   gap: 20px;
 }
 .reviews__cards {
-  padding: var(--size-0);
+  padding: var(--size-4);
   display: none;
 }
 .reviews__cards .card {
   border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: var(--size-4);
+  width: 500px;
 }
 .reviews__cards .card__description {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   place-items: center;
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border-color);
 }
-.reviews__cards .card__description__name {
+.reviews__cards .card__description--name {
   text-align: left;
 }
-.reviews__cards .card__description__name .star {
+.reviews__cards .card__description--name .star {
   margin-bottom: 0.5rem;
   color: var(--primary-color);
   font-weight: lighter;
-  font-size: 1rem;
+  font-size: var(--size-3);
   color: var(--orange-6);
 }
-.reviews__cards .card__description__name h3 {
-  font-weight: bold;
+.reviews__cards .card__description--name h3 {
   color: var(--primary-color);
+  font-size: var(--size-3);
+  opacity: 0.8;
 }
 .reviews__cards .card__description p {
   color: var(--dark-color);
@@ -881,18 +908,12 @@ aside {
   left: 0;
   right: 0;
   height: 100vh;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.45);
   transition: all 0.3s ease-in-out;
-}
-.delete__modal[data-modal=false] {
-  display: none;
-}
-.delete__modal[data-modal=true] {
-  display: flex;
 }
 .delete__modal--message {
   display: flex;
@@ -911,6 +932,10 @@ aside {
 }
 .delete__modal--message a {
   text-decoration: none;
+}
+
+.show {
+  display: flex;
 }
 
 .signup {
@@ -1060,10 +1085,9 @@ aside {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
-  margin-block: var(--);
 }
 .admin__header {
-  padding: var(--size-3) var(--size-9);
+  padding: var(--size-3) var(--size-3);
   width: 100%;
   margin-inline: 0;
   border-bottom: var(--border-size-1) solid var(--gray-1);
@@ -1107,7 +1131,6 @@ aside {
 .admin__nav {
   position: fixed;
   top: 0;
-  bottom: -1;
   width: 100px;
   height: 100vh;
   background-color: var(--gray-6);
@@ -1142,8 +1165,7 @@ aside {
 .admin__content {
   margin-top: var(--size-3);
   margin-bottom: var(--size-3);
-  margin-inline: 2.25rem;
-  margin-inline: 4rem;
+  margin-inline: var(--size-5);
 }
 .admin__content h1 {
   margin-block: var(--size-4);
@@ -1172,18 +1194,23 @@ aside {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   gap: 20px;
-  margin-bottom: 3rem;
+  margin-bottom: var(--size-3);
 }
 .admin__card {
   text-align: center;
   background-color: white;
-  border-radius: var(--radius-3);
-  border: var(--border-size-2) solid var(--gray-6);
-  padding: var(--size-4);
-  box-sizing: var(--shadow-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: var(--radius-2);
+  border: var(--border-size-1) solid var(--gray-1);
+  padding: var(--size-6);
+  box-shadow: var(--shadow-2);
+  border: 1px solid var(--gray-3);
 }
 .admin__card--icon {
-  font-size: 1.5rem;
+  font-size: var(--size-6);
   color: rgb(196, 196, 196);
 }
 .admin__card--icon i {
@@ -1194,12 +1221,12 @@ aside {
 }
 .admin__card--num {
   margin-block: var(--size-3);
-  font-size: var(--size-4);
-  color: var(--orange-9);
+  font-size: var(--size-7);
+  color: var(--orange-7);
   font-weight: bold;
 }
 .admin__card--heading {
-  font-size: var(--size-4);
+  font-size: var(--size-3);
 }
 .admin__table--heading {
   display: flex;

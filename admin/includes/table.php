@@ -1,34 +1,71 @@
 <table>
     <thead>
         <tr>
-            <td>Name</td>
-            <td>Author</td>
-            <td>Image</td>
-            <td>File</td>
-            <td>Description</td>
-            <td>Category</td>
-            <td colspan="2">Action</td>
+            <td>
+                <p>
+                    Name
+                </p>
+            </td>
+            <td>
+                <p>Author</p>
+            </td>
+            <td>
+                <p>Image</a>
+            </td>
+            <td>
+                <p>File</p>
+            </td>
+            <td>
+                <p>Desc</p>
+            </td>
+            <td>
+                <p>CatID</p>
+            </td>
+            <td colspan="2">
+                <p>Operations</p>
+            </td>
         </tr>
     </thead>
 
     <tbody>
+
         <?php foreach ($books as $book) : ?>
             <tr>
-                <td><?= substr($book['name'], 0, 5); ?>..</td>
-                <td><?= substr($book['author'], 0, 6); ?>..</td>
-                <td><?= $book['image']; ?></td>
-                <td><?= $book['file']; ?></td>
-                <td><?= substr($book['description'], 0, 10); ?>..</td>
-                <td><?= $book['category']; ?></td>
                 <td>
-                    <a href="edit_book.php?id=<?= $book['id']; ?>" class="edit__icon">
-                        <em class="fa-regular fa-pen-to-square"></em>
-                    </a>
+                    <p><?= substr($book['name'], 0, 5); ?>..</p>
                 </td>
                 <td>
-                    <button class="showDeleteModal delete__icon">
-                        <em class="fa-regular fa-trash-can"></em>
-                    </button>
+                    <p><?= substr($book['author'], 0, 5); ?>..</p>
+                </td>
+                <td>
+                    <p><img src="../images/<?= $book['image']; ?>" alt="<?= $book['name'], 0, 5; ?> image" /></p>
+                </td>
+                <td>
+                    <p><?= substr($book['file'], 0, 5); ?></p>
+                </td>
+                <td>
+                    <p><?= substr($book['description'], 0, 5); ?>..</p>
+                </td>
+                <td>
+                    <p><?= $book['category']; ?></p>
+                </td>
+                <td>
+                    <p>
+                        <button type="submit" class="edit__icon">
+                            <a href="edit_book.php?id=<?= $book['id']; ?>">
+                                <em class="fa-regular fa-pen-to-square"></em>
+                            </a>
+                        </button>
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        <button type="submit" class="showDeleteModal delete__icon">
+                            <a href="delete_book.php?id=<?= $book['id']; ?>">
+                                <em class="fa-regular fa-trash-can"></em>
+                            </a>
+                        </button>
+                    </p>
                 </td>
             </tr>
         <?php endforeach; ?>

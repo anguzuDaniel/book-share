@@ -8,14 +8,6 @@ html {
 	@media (min-width: 1000px) {
 		font-size: calc(137.5%);
 	}
-
-	--text-1: var(--gray-9);
-	--text-2: var(--gray-7);
-
-	@media (--OSdark) {
-		--text-1: var(--gray-1);
-		--text-2: var(--gray-2);
-	}
 }
 
 body {

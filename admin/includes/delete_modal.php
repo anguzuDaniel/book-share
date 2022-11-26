@@ -1,4 +1,4 @@
-            <div class="delete__modal" data-modal="false">
+            <div class="delete__modal">
 
                 <div class="delete__modal--message">
 

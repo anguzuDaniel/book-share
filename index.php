@@ -31,6 +31,7 @@ $count = 0;
 
     <nav class="navigation__secondary">
         <ul>
+            <!-- add category to the header navigation section on home page -->
             <?php foreach ($categories as $category) : ?>
                 <li>
                     <a href=""><?= $category['name']; ?></a>
@@ -43,11 +44,19 @@ $count = 0;
     <section class="book">
         <h1 class="book--title">Best Sellers</h1>
 
-        <div class="book__wrapper">
-            <?php require_once "includes/books.php"; ?>
-        </div>
+        <!-- if books array empty -->
+        <?php if (empty($books)) : ?>
+            <p>No books to show yet!</p>
+        <?php else : ?>
 
-        <p class="book__more"><a href="all_books.php">More books</a></p>
+            <!-- show books on  homepage -->
+            <div class="book__wrapper">
+                <?php require_once "includes/books.php"; ?>
+            </div>
+
+            <p class="book__more"><a href="all_books.php">More books</a></p>
+        <?php endif; ?>
+
     </section>
     <!-- book section | start -->
 
