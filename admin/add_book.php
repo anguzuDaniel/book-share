@@ -5,6 +5,13 @@ $conn = getConn();
 
 $categories = getAllCategories($conn);
 
+$book_title = '';
+$book_author = '';
+$book_cover = '';
+$upload_pdf = '';
+$book_category = '';
+$book_description = '';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $book_title = $_POST['book_title'];
     $book_author = $_POST['book_author'];
@@ -33,7 +40,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         if ($stmt) {
             $id = $_POST['id'];
-
             header("Location: read_book.php");
         } else {
             $conn->errorInfo();
@@ -55,13 +61,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <!-- admin section wrapper start -->
         <section class="admin__content">
             <div class="heading | admin__content--heading">
-                <h1>Add new Book to the library.<h1> </h1>
-                </h1>
+                <h1>Add new Book to the library.<h1>
                 <hr>
             </div>
-
             <?php require_once "includes/form.php"; ?>
-
         </section>
         <!-- admin section wrapper end -->
     </div>

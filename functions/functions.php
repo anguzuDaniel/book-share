@@ -24,7 +24,7 @@ function getAllBooks($conn, $column = '*')
  * @param  mixed $conn
  * @param  mixed $id
  * @param  mixed $column
- * @return void
+ * @return array
  */
 function getBookById($conn, $id, $column = '*')
 {
@@ -150,7 +150,7 @@ function addBook($conn, $name, $author, $image, $file, $description, $category)
  * @param  mixed $category
  * @return void
  */
-function formValidation($name, $author, $image, $files, $description, $category)
+function formValidation($name, $author, $image, $pdf_file, $description, $category)
 {
 
     $errors = [];
@@ -163,8 +163,8 @@ function formValidation($name, $author, $image, $files, $description, $category)
         $errors[] = "Author name cannot be left empty";
     }
 
-    if ($files == "") {
-        $errors[] = "File cannot be left empty";
+    if ($pdf_file == "") {
+        $errors[] = "Please provide a pdf file";
     }
 
     if ($image == "") {

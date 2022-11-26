@@ -262,7 +262,6 @@ p {
 }
 
 table {
-  width: 100%;
   border-collapse: collapse;
   background-color: white;
   border: var(--border-1) solid var(--gray-1);
@@ -372,7 +371,7 @@ table tbody tr:nth-child(odd) {
 }
 
 .error__info {
-  color: red;
+  list-style: none;
 }
 
 .header {
@@ -1115,8 +1114,6 @@ aside {
   font-size: var(--font-size-5);
 }
 .admin__content--heading {
-  display: flex;
-  align-items: center;
   gap: 10px;
   opacity: 0.8;
   font-weight: lighter;

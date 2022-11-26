@@ -8,53 +8,48 @@
 <?php endif; ?>
 <!-- error handler end -->
 
-
 <!-- form start -->
 <form method="post" enctype="multipart/form-data">
-    <?php if (!$id) : ?>
-        <h1>No book with that id found, please provide a valid id in the record.</h1>
-    <?php else : ?>
-        <?php foreach ($books as $book) : ?>
-            <div class="form__row--container">
-                <div class="form__row">
-                    <label for="book_title" class="form__row--label">Title</label>
-                    <input type="text" name="book_title" value="" placeholder="<?= htmlspecialchars($book['name']); ?>" value="<?= htmlspecialchars($book['name']); ?>" />
-                </div>
 
-                <div class="form__row">
-                    <label for="book_author" class="form__row--label">Author</label>
-                    <input type="text" name="book_author" value="" placeholder="<?= htmlspecialchars($book['author']); ?>" value="<?= htmlspecialchars($book['author']); ?>" />
-                </div>
-            </div>
+    <div class="form__row--container">
+        <div class="form__row">
+            <label for="book_title" class="form__row--label">Title</label>
+            <input type="text" name="book_title" placeholder="Book title" value="<?= htmlspecialchars($book_title); ?>" />
+        </div>
 
-            <div class="form__row--container">
-                <div class="form__row">
-                    <label for="book_cover" class="form__row--label">Book cover</label>
-                    <input type="file" class="form__row--img" name="book_cover" src="<?= $book['image']; ?>" value="<?= $book['image']; ?>" />
-                </div>
+        <div class=" form__row">
+            <label for="book_author" class="form__row--label">Author</label>
+            <input type="text" name="book_author" placeholder=" Book author" value="<?= htmlspecialchars($book_author); ?>" />
+        </div>
+    </div>
 
-                <div class="form__row">
-                    <label for="book_pdf" class="form__row--label">Pdf file</label>
-                    <input type="file" class="form__row--img" name="book_pdf" value="<?= $book['file']; ?>" accept="application/pdf" src="<?= $book['file']; ?>" />
-                </div>
-            </div>
+    <div class="form__row--container">
+        <div class="form__row">
+            <label for="book_cover" class="form__row--label">Book cover</label>
+            <input type="file" class="form__row--img" name="book_cover" src="<?= $book_author; ?>" value="<?= $book_cover; ?>" />
+        </div>
 
-            <div class="form__row">
-                <label for="book_category" class="form__row--label">Category</label>
-                <select name="book_category">
-                    <?php foreach ($categories as $category) : ?>
-                        <option value="<?= $category['id']; ?>"><?= $category['name']; ?></option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
+        <div class="form__row">
+            <label for="book_pdf" class="form__row--label">Pdf file</label>
+            <input type="file" class="form__row--img" name="book_pdf" accept="application/pdf" src="<?= $upload_pdf; ?>" value="<?= $upload_pdf; ?>" />
+        </div>
+    </div>
 
-            <div class="form__row">
-                <label for="book_description" class="form__row--label">Content</label>
-                <textarea name="book_description" id="" cols="30" rows="10" style="resize: none" placeholder="Book description"><?= htmlspecialchars($book['description']); ?></textarea>
-            </div>
+    <div class="form__row">
+        <label for="book_category" class="form__row--label">Category</label>
+        <select name="book_category">
+            <option value="">select a book category</option>
+            <?php foreach ($categories as $category) : ?>
+                <option value=" <?= $category['id']; ?>"><?= $category['name']; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
 
-            <button class="btn btn--submit">Save</button>
-        <?php endforeach; ?>
-    <?php endif; ?>
+    <div class="form__row">
+        <label for="book_description" class="form__row--label">Content</label>
+        <textarea name="book_description" id="" cols="30" rows="10" style="resize: none" placeholder="Book description"><?= htmlspecialchars($book_description); ?></textarea>
+    </div>
+
+    <button class="btn btn--submit">Save</button>
 </form>
 <!-- form end -->

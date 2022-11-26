@@ -9,6 +9,15 @@ $id = $_GET['id'];
 if (isset($_GET['id'])) {
     $books = getBookById($conn, $id);
 
+    foreach ($books as $book) {
+        $book_title = $book['name'];
+        $book_author = $book['author'];
+        $book_cover = $book['image'];
+        $upload_pdf = $book['file'];
+        $book_description = $book['description'];
+        $book_category = $book['category'];
+    }
+
     if (!$books) {
         echo "Book not found!";
     }
@@ -72,8 +81,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <hr>
             </div>
 
-            <?php require_once "includes/form.php"; ?>
-
+            <?php if (!$id) : ?>
+                <h1>No book with that id found, please provide a valid id in the record.</h1>
+            <?php else : ?>
+                <?php require_once "includes/form.php"; ?>
+            <?php endif; ?>
         </section>
         <!-- admin section wrapper end -->
     </div>
