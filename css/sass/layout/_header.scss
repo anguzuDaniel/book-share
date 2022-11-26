@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem var(--size-9);
+	padding: 1rem var(--size-4);
 	color: white;
 	position: fixed;
 	top: 0;
@@ -34,6 +34,14 @@
 
 		&:hover {
 			color: var(--clr-primary);
+		}
+	}
+}
+
+@include respond(tab-port) {
+	.header {
+		nav {
+			display: none;
 		}
 	}
 }

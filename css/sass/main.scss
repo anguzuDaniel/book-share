@@ -1,9 +1,9 @@
 /* the props */
 @use "./vendors/props" as *;
 
-@use "./abstract/function" as *;
-@use "./abstract/mixins" as *;
 @use "./abstract/variables" as *;
+@use "./abstract/mixins" as *;
+@use "./abstract/function" as *;
 
 @use "./base/animations" as *;
 @use "./base/base";
