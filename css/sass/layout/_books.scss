@@ -1,6 +1,5 @@
 .book {
-	margin-inline: var(--size-9);
-	margin-block: var(--size-9);
+	padding: Max(var(--size-2), var(--size-4)) Max(var(--size-6), var(--size-8));
 
 	&__wrapper {
 		display: grid;

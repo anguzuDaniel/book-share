@@ -13,9 +13,8 @@
 // @import "/open-props/gradients.min.css";
 // // /* see PropPacks for the full list */
 
-@import url("/open-props/normalize.min.css");
-@import url("/open-props/animations.min.css");
-@import url("/open-props/buttons.min.css");
-@import url("/open-props/fonts.min.css");
-@import url("/open-props/gray.min.css");
-@import url("/open-props/shadows.min.css");
+@use "./open-props/animations.min.css" as *;
+@use "./open-props/buttons.min.css" as *;
+@use "./open-props/fonts.min.css" as *;
+@use "./open-props/gray.min.css" as *;
+@use "./open-props/shadows.min.css" as *;

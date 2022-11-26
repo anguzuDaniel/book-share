@@ -1,10 +1,70 @@
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 37.5em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width: 56.25em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-land {
+		@media only screen and (max-width: 75rem) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: 122.5em) {
+			@content;
+		}
+	}
+}
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 37.5em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width: 56.25em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-land {
+		@media only screen and (max-width: 75rem) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: 122.5em) {
+			@content;
+		}
+	}
+}
+button {
+	font-weight: light;
+	box-shadow: var(--shadow-1);
+	padding: var(--size-2) var(--size-2);
+	font-size: 0.8rem;
+
+	@include respond(tab-port) {
+		padding: var(--size-3) var(--size-2);
+	}
+}
+
 .btn {
 	cursor: pointer;
 	border: none;
 	background-color: var(--orange-6);
 	color: white;
-	padding: 0.5rem 0.8rem;
-	text-shadow: 0 1px 0 var(--orange-6);
 	border-radius: var(--radius-2);
 
 	&:hover {
@@ -17,8 +77,6 @@
 		color: white;
 
 		button {
-			padding: var(--pad);
-			font-weight: bold;
 			border-bottom: none;
 			font-size: 1.2rem;
 			color: var(--heading-clr);
@@ -28,23 +86,23 @@
 			width: 100%;
 			border: none;
 			background-color: var(--control-btn-clr);
+			box-shadow: none;
 		}
 
 		&--login {
 			width: 100%;
 			border: none;
-			background-color: white;
+			background-color: transparent;
+			box-shadow: none;
 		}
 	}
 
-	&--primary {
-		background: var(--color-gredient);
-		background: var(--btn-clr);
-		width: 100%;
-		padding-block: var(--padding-block);
-		color: var(--clr-white);
-		transition: all 0.3s ease-in-out;
-		border-radius: var(--btn-radius);
+	@include respond(tab-port) {
+		&__form {
+			&--row {
+				flex-direction: column;
+			}
+		}
 	}
 }
 
@@ -62,17 +120,23 @@
 }
 
 .hero__btn {
-	padding: 0.25rem 0.8rem;
+	padding: var(--size-2) var(--size-3);
 	border: none;
 	cursor: pointer;
 	border-top-right-radius: var(--size-1);
 	border-bottom-right-radius: var(--size-1);
-	background-color: var(--orange-6);
-	text-shadow: 0 1px 0 var(--orange-6);
+	background-color: transparent;
+	transform: translateX(-20px);
 	color: white;
+	font-size: 0.85rem;
+	font-weight: bold;
 
-	&:hover {
-		background-color: var(--orange-5);
+	@include respond(tab-port) {
+		&__form {
+			&--row {
+				flex-direction: column;
+			}
+		}
 	}
 }
 

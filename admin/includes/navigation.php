@@ -1,6 +1,6 @@
 <header class="admin__header">
     <div class="admin__primary">
-        <h1 class="admin--logo">Book Share</h1>
+        <h1 class="logo">Book<span>Share</span></h1>
 
         <div class="admin__content--heading">
             <div class="admin__user--cta">

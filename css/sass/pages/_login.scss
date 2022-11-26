@@ -3,25 +3,6 @@
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-
-	&__image {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-		width: 70%;
-		padding: 2rem 6rem;
-
-		background-color: var(--background-bm);
-
-		// background-image: url("/images/124-1247377_website-development-auckland-web-development-png-images-hd.png");
-		background-image: url(images/124-1247377_website-development-auckland-web-development-png-images-hd.png);
-		background-blend-mode: darken;
-
-		img {
-			width: 100%;
-		}
-	}
 }
 
 .form {
@@ -44,19 +25,10 @@
 		width: 100%;
 		border: none;
 		border: 1px solid var(--border-color);
-		// border-radius: var(--border-radius);
 		border-top-right-radius: var(--border-radius);
 		border-bottom-right-radius: var(--border-radius);
 		outline: none;
 		margin-left: -1px;
-
-		// &:focus {
-		// 	// border: 1px solid var(--input-outline-clr);
-		// 	box-shadow: var(--shadow-2);
-		// }
-
-		&:active {
-		}
 	}
 
 	label {
@@ -107,7 +79,6 @@
 		grid-auto-flow: column;
 		justify-content: space-between;
 		align-items: center;
-		margin-block: 1rem;
 		color: rgba(0, 0, 0, 0.505);
 
 		&--con {
@@ -122,20 +93,11 @@
 			p {
 				margin-left: 0.5rem;
 				letter-spacing: 0.5px;
+				font-size: .8rem;
 			}
 		}
 	}
 }
-
-// #signup {
-// 	display: flex;
-// 	flex-direction: column;
-// }
-
-// // #login {
-// // 	display: flex;
-// // 	flex-direction: column;
-// // }
 
 .notShown {
 	display: none;

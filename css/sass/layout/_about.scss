@@ -2,6 +2,7 @@
 	height: 80vh;
 	position: relative;
 	z-index: 1;
+	overflow: hidden;
 
 	h1,
 	p {
@@ -25,7 +26,7 @@
 	}
 
 	&__text {
-		background-color: rgba(0, 0, 0, 0.697);
+		background-color: var(--overlay-color);
 		position: absolute;
 		top: 0;
 		width: 100%;

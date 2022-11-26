@@ -1,3 +1,28 @@
+@mixin respond($breakpoint) {
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 37.5em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width: 56.25em) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == tab-land {
+		@media only screen and (max-width: 75rem) {
+			@content;
+		}
+	}
+
+	@if $breakpoint == big-desktop {
+		@media only screen and (min-width: 122.5em) {
+			@content;
+		}
+	}
+}
 .hero {
 	height: 80vh;
 	color: white;
@@ -18,7 +43,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 10px;
+		gap: 30px;
 		position: absolute;
 		top: 50%;
 		left: 50%;
@@ -27,7 +52,7 @@
 	}
 
 	&__main {
-		background-color: rgba(0, 0, 0, 0.697);
+		background-color: var(--overlay-color);
 		position: absolute;
 		top: 0;
 		width: 100%;
@@ -40,11 +65,8 @@
 	}
 
 	&__search {
-		width: 500px;
+		width: Max(400px, 100%);
 		padding: var(--size-2) var(--size-3);
-	}
-
-	&__search {
 		display: flex;
 		border-top-left-radius: var(--size-1);
 		border-bottom-left-radius: var(--size-1);
@@ -52,5 +74,25 @@
 
 	&__paragraph {
 		font-size: 0.8rem;
+	}
+
+	@include respond(tab-port) {
+		&__container {
+			width: 80%;
+		}
+
+		&__search {
+			flex-direction: column;
+			gap: 20px;
+
+			input {
+				width: 100%;
+				border: none;
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+				border-radius: var(--size-1);
+				padding: var(--size-3) var(--size-3);
+			}
+		}
 	}
 }

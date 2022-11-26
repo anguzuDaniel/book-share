@@ -11,4 +11,10 @@
         <a href="" class="login__btn">Login</a>
         <a href="login.php" class="signup__btn">Signup</a>
     </div>
+
+    <button class="humbuger">
+        <span class="humbuger__bar"></span>
+        <span class="humbuger__bar"></span>
+        <span class="humbuger__bar"></span>
+    </button>
 </header>

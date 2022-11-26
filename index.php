@@ -80,7 +80,7 @@ $count = 0;
         </div>
 
         <div class="user__review">
-            <h1>Review</h1>
+            <h1>Feed back</h1>
 
             <form class="user__form">
                 <div class="user__form--row">
