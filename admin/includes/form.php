@@ -19,14 +19,14 @@
 
         <div class=" form__row">
             <label for="book_author" class="form__row--label">Author</label>
-            <input type="text" name="book_author" placeholder=" Book author" value="<?= htmlspecialchars($book_author); ?>" />
+            <input type="text" name="book_author" placeholder=" Book author" src="../../images/<?= htmlspecialchars($book_author); ?>" value="<?= htmlspecialchars($book_author); ?>" />
         </div>
     </div>
 
     <div class="form__row--container">
         <div class="form__row">
             <label for="book_cover" class="form__row--label">Book cover</label>
-            <input type="file" class="form__row--img" name="book_cover" src="<?= $book_author; ?>" value="<?= $book_cover; ?>" />
+            <input type="file" class="form__row--img" name="book_cover" src="../uploads/pdf/<?= $book_author; ?>" value="<?= $book_cover; ?>" />
         </div>
 
         <div class="form__row">

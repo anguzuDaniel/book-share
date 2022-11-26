@@ -271,7 +271,7 @@ table thead {
 }
 table thead tr td {
   padding-block: var(--size-5);
-  padding-inline: var(--size-4);
+  padding-inline: var(--size-2);
   border-bottom: 1px solid var(--border-clr);
   transition: all 0.3s ease-in-out;
   font-size: var(--size-3);
@@ -279,8 +279,7 @@ table thead tr td {
 table tbody tr td {
   padding-block: var(--size-5);
   border-bottom: 1px solid var(--border-clr);
-  padding-inline: var(--size-4);
-  font-weight: 500;
+  padding-inline: var(--size-3);
   font-size: var(--size-3);
 }
 table tbody tr td img {
@@ -874,6 +873,44 @@ aside {
 }
 .user h1 {
   color: white;
+}
+
+.delete__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  transition: all 0.3s ease-in-out;
+}
+.delete__modal[data-modal=false] {
+  display: none;
+}
+.delete__modal[data-modal=true] {
+  display: flex;
+}
+.delete__modal--message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  width: max(300px, 60%);
+  padding: var(--size-6);
+  font-size: 1rem;
+  background-color: var(--gray-1);
+  border-radius: var(--radius-3);
+}
+.delete__modal--message h1 {
+  font-size: var(--size-1);
+}
+.delete__modal--message a {
+  text-decoration: none;
 }
 
 .signup {

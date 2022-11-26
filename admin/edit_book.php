@@ -60,8 +60,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         } else {
             $conn->errorInfo();
         }
-    } else {
-        echo "Sorry, unable to update Book.";
     }
 }
 

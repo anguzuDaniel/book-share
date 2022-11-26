@@ -11,6 +11,8 @@ const rightBtn = document.getElementById("right--btn");
 const leftBtn = document.getElementById("left--btn");
 const reviewCards = document.querySelectorAll(".reviews__cards");
 const userDropdownBtn = document.querySelector(".admin__content--user");
+const deleteModalBtn = document.querySelector(".showDeleteModal");
+const deleteModal = document.querySelector(".delete__modal");
 
 /** functions */
 // adds white background to header when scrolling down
@@ -109,3 +111,12 @@ document
 			document.querySelector(id).scrollIntoView({ behavior: "smooth" });
 		}
 	});
+
+deleteModalBtn.addEventListener("click", (e) => {
+	e.preventDefault();
+	let visiblity = deleteModal.getAttribute("data-modal");
+
+	if (visiblity === "false") {
+		deleteModal.setAttribute("data-modal", true);
+	}
+});

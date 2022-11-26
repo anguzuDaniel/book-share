@@ -40,6 +40,17 @@ function getBookById($conn, $id, $column = '*')
     }
 }
 
+function deleteBookById($conn, $id)
+{
+    $sql = "DELETE FROM book WHERE id = :id";
+
+    $stmt = $conn->prepare($sql);
+
+    $stmt->bindParam(':id', $id);
+
+    $stmt->execute();
+}
+
 function updateBook($conn, $id, $name, $author, $image, $file, $description, $category)
 {
     $sql = "UPDATE book SET 

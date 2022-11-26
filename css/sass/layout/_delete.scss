@@ -1,0 +1,44 @@
+.delete {
+	&__modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.45);
+		transition: all 0.3s ease-in-out;
+
+		&[data-modal="false"] {
+			display: none;
+		}
+
+		&[data-modal="true"] {
+			display: flex;
+		}
+
+		&--message {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 40px;
+			width: max(300px, 60%);
+			padding: var(--size-6);
+			font-size: 1rem;
+			background-color: var(--gray-1);
+			border-radius: var(--radius-3);
+
+			h1 {
+				font-size: var(--size-1);
+			}
+
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
