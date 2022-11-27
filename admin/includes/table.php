@@ -1,5 +1,5 @@
 <table>
-    <caption>All book in the database</caption>
+    <caption style="display:none;">All book in the database</caption>
     <thead>
         <th>
         <td>

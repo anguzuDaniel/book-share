@@ -45,3 +45,24 @@
 		display: flex;
 	}
 }
+
+.admin {
+	&__humbuger {
+		border: 2px solid white;
+		display: flex;
+		flex-direction: column;
+		padding: 0.5rem;
+		gap: 4px;
+		box-shadow: var(--shadow-1);
+		background-color: transparent;
+		cursor: pointer;
+
+		span {
+			display: block;
+			flex-direction: column;
+			width: 30px;
+			height: 3px;
+			background-color: white;
+		}
+	}
+}

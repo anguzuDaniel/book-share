@@ -4,4 +4,4 @@ include_once "includes/header.php";
 
 logout();
 
-redirect('/blog/index.php');
+redirect('/book-share/index.php');

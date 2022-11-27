@@ -53,7 +53,6 @@
 			margin-left: auto;
 			color: var(--orange-9);
 			padding: 0.5rem;
-			background-color: blue;
 
 			em {
 				cursor: pointer;
@@ -118,13 +117,54 @@
 		}
 	}
 
+	// admin logout button
+	&__logout {
+		margin-top: auto;
+		margin-bottom: 3rem;
+
+		a {
+			font-size: var(--size-3);
+			color: white;
+			text-decoration: none;
+		}
+	}
+
 	// Admin sidebar navigation | starts here
 	&__nav {
-		position: fixed;
+		padding-top: var(--size-3);
 		top: 0;
 		width: 100px;
 		height: 100vh;
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		align-items: center;
+		padding-left: -20px;
 		background-color: var(--gray-6);
+		z-index: 9999999999999999;
+
+		button {
+			margin-bottom: var(--size-3);
+		}
+
+		&[data-visible="false"] {
+			width: 100px;
+		}
+
+		&[data-visible="true"] {
+			width: 200px;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		span {
+			display: none;
+		}
 
 		&--wrapper {
 			display: flex;
@@ -134,27 +174,43 @@
 		}
 
 		&--item {
-			padding: 1rem 1.5rem;
+			padding: var(--size-3) var(--size-3);
 			border-bottom: 1px solid var(--bg-light-clr);
 			cursor: pointer;
 			font-size: var(--size-3);
 			color: white;
+			transition: all 0.2s ease-in-out;
+			list-style: none;
+			box-sizing: var(--shadow-1);
+			border-bottom: 1px solid rgba(0, 0, 0, 0.261);
+
+			button {
+				box-sizing: var(--shadow-1);
+			}
 
 			a {
 				color: var(--clr-compilment-text);
+				display: flex;
+				gap: 10px;
+				text-decoration: none;
 			}
 
-			&:first-child {
+			&:is(:first-child) {
 				border-top: 1px solid var(--bg-light-clr);
-				box-sizing: var(--shadow-1);
+				border-top: 1px solid rgba(0, 0, 0, 0.261);
 			}
 
 			&:hover {
 				border-left: 5px solid var(--clr-compilment-text);
-				background-color: var(--clr-primary--hover);
+				background-color: var(--gray-7);
+				box-shadow: var(--shadow);
 				filter: brightness(100%);
-				color: var(--white-clr);
-				transition: all 0.2s ease-in-out;
+				// width: 100%;
+				z-index: 9999999;
+
+				span {
+					width: 100%;
+				}
 			}
 		}
 	}
@@ -355,33 +411,6 @@
 
 	&--logo {
 		color: var(--orange-6);
-	}
-
-	&__humbuger {
-		border-bottom: 1px solid var(--clr-compilment-text);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		padding-bottom: 2.25rem;
-		margin-bottom: 1rem;
-		padding-top: 4rem;
-
-		&--bar1,
-		&--bar2,
-		&--bar3 {
-			display: block;
-			width: 35px;
-			height: 4px;
-			background-color: var(--clr-compilment-text);
-			margin-bottom: 4px;
-			border-radius: 5px;
-		}
-
-		&--btn {
-			background-color: transparent;
-			border: none;
-			cursor: pointer;
-		}
 	}
 
 	@include respond(tab-port) {

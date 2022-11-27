@@ -14,6 +14,10 @@ const userDropdownBtn = document.querySelector(".admin__content--user");
 const deleteModalBtn = document.querySelector(".showDeleteModal");
 const deleteModal = document.querySelector(".delete__modal");
 
+// form the admin section
+const adminNavBtn = document.getElementById("admin__nav--btn");
+const adminNav = document.querySelector(".admin__nav");
+
 /** functions */
 // adds white background to header when scrolling down
 window.onscroll = function () {
@@ -121,4 +125,14 @@ deleteModalBtn.forEach((btn) => {
 			deleteModal.classList.add("show");
 		}
 	});
+});
+
+adminNavBtn.addEventListener("click", () => {
+	let visible = adminNav.getAttribute("data-visible");
+
+	if (visible === "false") {
+		adminNav.setAttribute("data-visible", true);
+	} else {
+		console.log("open");
+	}
 });

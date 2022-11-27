@@ -8,8 +8,13 @@
     </nav>
 
     <div class="cta">
-        <a href="" class="login__btn">Login</a>
-        <a href="login.php" class="signup__btn">Signup</a>
+        <?php if (isLoggedIn()) : ?>
+            <a href="/book-share/logout.php" class="login__btn">logout</a>
+            <a href="/book-share/admin/index.php" class="signup__btn">admin</a>
+        <?php else : ?>
+            <a href="login.php" class="login__btn">Login</a>
+            <a href="login.php" class="signup__btn">Signup</a>
+        <?php endif; ?>
     </div>
 
     <button class="humbuger">

@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
 
             <?php if (!$id) : ?>
-                <p> Sorry, no book with that id found. Please provide a valid book id.</p>
+                <p>Sorry, no book with that id found. Please provide a valid book id.</p>
             <?php else : ?>
                 <?php require_once "includes/form.php"; ?>
             <?php endif; ?>
