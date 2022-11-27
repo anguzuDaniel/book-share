@@ -1,5 +1,6 @@
 <?php include_once "includes/header.php"; ?>
 <?php
+isLoggedIn();
 $conn = getConn();
 
 $books = getAllBooks($conn);

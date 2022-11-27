@@ -17,7 +17,8 @@
 @use "./components/nav" as *;
 @use "./components/logo" as *;
 @use "./components/dropdown" as *;
-@use "./components/error" as *;
+@use "./components/error_messages" as *;
+@use "./components/success_messages" as *;
 @use "./components/humbuger" as *;
 
 @use "./layout/header" as *;

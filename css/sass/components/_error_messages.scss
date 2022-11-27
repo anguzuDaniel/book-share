@@ -1,0 +1,19 @@
+.error {
+	&__info {
+		// color: rgba(255, 0, 0, 0.62);
+		list-style: none;
+	}
+
+	&--signup {
+		p {
+			background-color: rgba(255, 0, 0, 0.473);
+			border: var(--border) solid var(--gray-1);
+			padding: 1rem;
+			box-shadow: var(--shadow-2);
+			border-radius: var(--size-1);
+			font-size: .8rem;
+			margin-top: 1rem;
+			color: var(--gray-9);
+		}
+	}
+}

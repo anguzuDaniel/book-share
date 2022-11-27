@@ -1,6 +1,7 @@
 <?php require_once "includes/header.php"; ?>
 
 <?php
+isLoggedIn();
 $conn = getConn();
 
 $categories = getAllCategories($conn);

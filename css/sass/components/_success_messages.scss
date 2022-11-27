@@ -1,0 +1,14 @@
+.success {
+	&--signup {
+		p {
+			background-color: rgba(9, 255, 0, 0.473);
+			border: var(--border) solid var(--gray-1);
+			padding: 1rem;
+			box-shadow: var(--shadow-2);
+			border-radius: var(--size-1);
+			font-size: 0.8rem;
+			margin-top: 1rem;
+			color: var(--gray-9);
+		}
+	}
+}

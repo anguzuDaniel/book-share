@@ -802,6 +802,27 @@ table tbody tr:nth-child(even) {
 .error__info {
   list-style: none;
 }
+.error--signup p {
+  background-color: rgba(255, 0, 0, 0.473);
+  border: var(--border) solid var(--gray-1);
+  padding: 1rem;
+  box-shadow: var(--shadow-2);
+  border-radius: var(--size-1);
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: var(--gray-9);
+}
+
+.success--signup p {
+  background-color: rgba(9, 255, 0, 0.473);
+  border: var(--border) solid var(--gray-1);
+  padding: 1rem;
+  box-shadow: var(--shadow-2);
+  border-radius: var(--size-1);
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  color: var(--gray-9);
+}
 
 .humbuger {
   border: 2px solid var(--orange-7);
@@ -1589,6 +1610,8 @@ aside {
   background-color: transparent;
   margin-left: auto;
   color: var(--orange-9);
+  padding: 0.5rem;
+  background-color: blue;
 }
 .admin__user--btn em {
   cursor: pointer;

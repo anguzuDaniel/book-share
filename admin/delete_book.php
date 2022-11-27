@@ -1,7 +1,7 @@
 <?php require_once "includes/header.php"; ?>
 
 <?php
-
+isLoggedIn();
 $conn = getConn();
 
 if (isset($_GET['id'])) {
