@@ -64,11 +64,12 @@ button {
 	cursor: pointer;
 	border: none;
 	background-color: var(--orange-6);
+	background-color: #0a84ff;
 	color: white;
 	border-radius: var(--radius-2);
 
 	&:hover {
-		background-color: var(--orange-5);
+		background-color: var(#0a84ffab);
 	}
 
 	&__control {

@@ -225,9 +225,7 @@ function getAllUsers($conn, $column = "*")
 
 function authenticateUser($conn, $email, $password)
 {
-    $sql = 'SELECT * 
-                FROM user
-                WHERE email = :email ';
+    $sql = 'SELECT * FROM user WHERE email = :email ';
 
     $stmt = $conn->prepare($sql);
 
@@ -242,7 +240,7 @@ function authenticateUser($conn, $email, $password)
 
 function checkUserEmail($conn, $email)
 {
-    $sql = 'SELECT email 
+    $sql = 'SELECT * 
                 FROM user
                 WHERE email = :email ';
 
@@ -252,7 +250,9 @@ function checkUserEmail($conn, $email)
 
     $stmt->execute();
 
-    $stmt->fetch();
+    if ($stmt->execute()) {
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
 
 function getUser($conn, $id, $column = "*")

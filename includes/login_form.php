@@ -3,32 +3,26 @@ if (isset($_POST['signin'])) {
     $errors = validationUserLoginForm($_POST['login_email'], $_POST['login_password']);
 
     if (!$errors) {
-        $userFound = checkUserEmail($conn, $_POST['login_email']);
 
-        if ($userFound) {
-            if (authenticateUser($conn, $_POST['login_email'], $_POST['login_password'])) {
-                login();
+        if (authenticateUser($conn, $_POST['login_email'], $_POST['login_password'])) {
+            
+            login();
 
-                redirect("/book-share/index.php");
-            } else {
-                $error = "Incorrect username/password, Please enter correct details";
-            }
+            redirect("/book-share/index.php");
+        } else {
+            $errors = "Incorrect username/password, Please enter correct details";
         }
-    } else {
-        echo "<div class='error--signup'><p> Can't leave field empty </p></div>";
     }
 }
-
-
 ?>
-
-
 
 <div class="form__login notShown">
 
     <!-- prints out error meassgae for wrong cridentials -->
-    <?php if (!empty($error)) : ?>
-        <span class="error-message"><?= $error; ?></span>
+    <?php if (!empty($errors)) : ?>
+        <div class='error--signup'>
+            <p><?= $errors; ?>.</p>
+        </div>
     <?php endif; ?>
 
     <h1 class="form--title">Sign In</h1>
@@ -57,7 +51,7 @@ if (isset($_POST['signin'])) {
             </div>
         </div>
 
-        <div class="form__remember">
+        <!-- <div class="form__remember">
             <div class="form__remember--con">
                 <input type="checkbox" name="" id="" name="remember" />
                 <p class="paragraph paragraph--remember">Remember Me</p>
@@ -66,7 +60,7 @@ if (isset($_POST['signin'])) {
             <div class="forgot_password">
                 <p><a href="#">Forgot password?</a></p>
             </div>
-        </div>
+        </div> -->
 
         <button type="submit" name="signin" class="btn btn--primary">
             Sign In

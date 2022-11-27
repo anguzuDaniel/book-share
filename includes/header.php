@@ -17,5 +17,6 @@
 <body>
     <?php
     session_start();
+    ob_start();
     require_once "config/dbConfig.php";
     require_once "functions/functions.php";

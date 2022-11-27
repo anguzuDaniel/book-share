@@ -14,18 +14,34 @@ if (isset($_POST['signup'])) {
         if ($userFound) {
             $signup = createUser($conn, $user_email, $username, $user_password);
 
-            if ($signup) {
-                redirect("/book-share/index.php");
-            } else {
-                echo "cause of error";
+            if (!$signup) {
+                $conn->errorInfo();
             }
         }
-    }
+    } 
 }
-
-var_dump(isset($_SESSION['is_logged_in']));
 ?>
 <div class="form__signup">
+    <!-- if button clicked and errors array empty then this will run -->
+    <?php if (isset($_POST['signup']) && !$errors) : ?>
+        <?php if (in_array($_POST['email'], $user = getAllUsers($conn, "email"))) : ?>
+            <?php foreach ($user as $u) : ?>
+                <div class='error--signup'>
+                    <p>An account with <?= $u['email']; ?> already exits, please login to continue.</p>
+                </div>
+            <?php endforeach; ?>
+        <?php else : ?>
+            <?php foreach ($user as $u) : ?>
+
+                <?php if ($u['email'] !== $_POST['email']) : ?>
+                    <div class='success--signup'>
+                        <p>User <?= $u['email']; ?> created successfully 😉, you are ready to login.</p>
+                    </div>
+                <?php endif; ?>
+            <?php endforeach; ?>
+
+        <?php endif; ?>
+    <?php endif; ?>
 
     <h1 class="form--title">Sign Up</h1>
 
