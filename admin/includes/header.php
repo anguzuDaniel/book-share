@@ -8,7 +8,7 @@
     <title>Login/Signup</title>
     <script defer src="../css/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/js/all.min.js"></script>
     <link rel="stylesheet" href="../css/fontawesome-free-6.2.0-web/fontawesome-free-6.2.0-web/css/all.min.css">
-    <script src="../js/script.js" defer></script>
+    <script type="text/javascript" src="../js/script.js" defer></script>
     <link rel="stylesheet" href="../css/sass/vendors/open-props/open-props.min.css">
     <!-- <link rel="stylesheet" href="../css/sass/vendors/open-props/normalize.min.css"> -->
     <link rel="stylesheet" href="../css/style.css">

@@ -123,6 +123,8 @@
 		margin-bottom: 3rem;
 
 		a {
+			display: flex;
+			gap: 10px;
 			font-size: var(--size-3);
 			color: white;
 			text-decoration: none;
@@ -143,9 +145,19 @@
 		padding-left: -20px;
 		background-color: var(--gray-6);
 		z-index: 9999999999999999;
+		transition: all 0.2s ease-in-out;
+		overflow: hidden;
 
 		button {
 			margin-bottom: var(--size-3);
+
+			span {
+				display: block;
+				flex-direction: column;
+				width: 30px;
+				height: 3px;
+				background-color: white;
+			}
 		}
 
 		&[data-visible="false"] {
@@ -154,6 +166,26 @@
 
 		&[data-visible="true"] {
 			width: 200px;
+
+			button {
+				margin-bottom: var(--size-3);
+				background-color: rgba(0, 0, 0, 0.261);
+				// transform-origin: center;
+
+				.bar--1 {
+					transform: translate(5.12px, 5px);
+					rotate: 45deg;
+				}
+
+				.bar--2 {
+					opacity: 0;
+				}
+
+				.bar--3 {
+					transform: translate(4.12px, -6px);
+					rotate: -45deg;
+				}
+			}
 		}
 
 		ul {
@@ -164,12 +196,13 @@
 
 		span {
 			display: none;
+			transition: all 0.8s ease-in-out;
 		}
 
 		&--wrapper {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			// justify-content: center;
 			align-items: center;
 		}
 
@@ -183,9 +216,10 @@
 			list-style: none;
 			box-sizing: var(--shadow-1);
 			border-bottom: 1px solid rgba(0, 0, 0, 0.261);
+			transition: all 0.8s ease-in-out;
 
 			button {
-				box-sizing: var(--shadow-1);
+				box-shadow: var(--shadow-1);
 			}
 
 			a {

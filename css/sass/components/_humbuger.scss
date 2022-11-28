@@ -32,6 +32,7 @@
 	box-shadow: var(--shadow-1);
 	background-color: transparent;
 	cursor: pointer;
+	z-index: 9999999999999999;
 
 	span {
 		display: block;

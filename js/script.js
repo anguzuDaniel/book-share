@@ -17,6 +17,12 @@ const deleteModal = document.querySelector(".delete__modal");
 // form the admin section
 const adminNavBtn = document.getElementById("admin__nav--btn");
 const adminNav = document.querySelector(".admin__nav");
+const adminNavText = document.querySelectorAll(".admin__nav--text");
+
+// home page
+const homeHumbugerBtn = document.querySelector(".humbuger");
+const homeNav = document.querySelector(".header__nav--list");
+const homeCtaBtns = document.querySelector(".cta");
 
 /** functions */
 // adds white background to header when scrolling down
@@ -32,26 +38,60 @@ window.onscroll = function () {
 	}
 };
 
-showSignupBtn.addEventListener("click", (e) => {
-	e.preventDefault();
-	if (signupForm.classList.contains("notShown")) {
-		loginForm.classList.add("notShown");
-		signupForm.classList.remove("notShown");
-		showSignupBtn.style.backgroundColor = "var(--control-btn-clr)";
-		showSignupBtn.style.boxShadow = "var(--control-btn-clr)";
-		showLoginbtn.style.backgroundColor = "transparent";
-	}
-});
+if (homeHumbugerBtn != null) {
+	homeHumbugerBtn.addEventListener("click", () => {
+		if (homeNav.style.display != "none") {
+			homeNav.style.display = "none";
+			homeCtaBtns.style.display = "none";
+		} else {
+			homeNav.style.display = "flex";
+			homeCtaBtns.style.display = "flex";
+		}
+	});
+}
 
-showLoginbtn.addEventListener("click", (e) => {
-	e.preventDefault();
-	if (loginForm.classList.contains("notShown")) {
-		loginForm.classList.remove("notShown");
-		signupForm.classList.add("notShown");
-		showLoginbtn.style.backgroundColor = "var(--control-btn-clr)";
-		showSignupBtn.style.backgroundColor = "transparent";
-	}
-});
+if (adminNavBtn != null) {
+	adminNavBtn.addEventListener("click", () => {
+		let visible = adminNav.getAttribute("data-visible");
+
+		if (visible === "false") {
+			adminNav.setAttribute("data-visible", true);
+			adminNavText.forEach((e) => {
+				e.style.display = "flex";
+			});
+		} else {
+			adminNav.setAttribute("data-visible", false);
+			adminNavText.forEach((e) => {
+				e.style.display = "none";
+			});
+		}
+	});
+}
+
+if (showSignupBtn != null) {
+	showSignupBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+		if (signupForm.classList.contains("notShown")) {
+			loginForm.classList.add("notShown");
+			signupForm.classList.remove("notShown");
+			showSignupBtn.style.backgroundColor = "var(--control-btn-clr)";
+			showSignupBtn.style.boxShadow = "var(--control-btn-clr)";
+			showLoginbtn.style.backgroundColor = "transparent";
+		}
+	});
+}
+
+if (showLoginbtn != null) {
+	showLoginbtn.addEventListener("click", (e) => {
+		e.preventDefault();
+		if (loginForm.classList.contains("notShown")) {
+			loginForm.classList.remove("notShown");
+			signupForm.classList.add("notShown");
+			showLoginbtn.style.backgroundColor = "var(--control-btn-clr)";
+			showSignupBtn.style.backgroundColor = "transparent";
+		}
+	});
+}
 
 // card slider effect
 const cardSlider = function () {
@@ -92,47 +132,43 @@ const cardSlider = function () {
 	};
 
 	// card slider btns
-	rightBtn.addEventListener("click", nextCard);
-	leftBtn.addEventListener("click", prevCard);
+	if (rightBtn != null) rightBtn.addEventListener("click", nextCard);
+	if (leftBtn != null) leftBtn.addEventListener("click", prevCard);
 };
 cardSlider();
 
-userDropdownBtn.addEventListener("click", (e) => {
-	e.preventDefault();
-	dropdown.style.display = "block";
-	console.log("clicked!!");
-});
+if (userDropdownBtn != null) {
+	userDropdownBtn.addEventListener("click", (e) => {
+		e.preventDefault();
+		dropdown.style.display = "block";
+		console.log("clicked!!");
+	});
+}
 
 // smooth scroll for links
-document
-	.querySelector(".navigation__list")
-	.addEventListener("click", function (e) {
-		console.log(e.target);
-		e.preventDefault();
+if (document.querySelector(".navigation__list") != null) {
+	document
+		.querySelector(".navigation__list")
+		.addEventListener("click", function (e) {
+			console.log(e.target);
+			e.preventDefault();
 
-		if (e.target.classList.contains("nav--link")) {
-			const id = e.target.getAttribute("href");
-			document.querySelector(id).scrollIntoView({ behavior: "smooth" });
-		}
+			if (e.target.classList.contains("nav--link")) {
+				const id = e.target.getAttribute("href");
+				document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+			}
+		});
+}
+
+if (deleteModalBtn != null) {
+	deleteModalBtn.forEach((btn) => {
+		btn.addEventListener("click", (e) => {
+			e.preventDefault();
+			if (deleteModal.classList.contains("show")) {
+				deleteModal.classList.remove("show");
+			} else {
+				deleteModal.classList.add("show");
+			}
+		});
 	});
-
-deleteModalBtn.forEach((btn) => {
-	btn.addEventListener("click", (e) => {
-		e.preventDefault();
-		if (deleteModal.classList.contains("show")) {
-			deleteModal.classList.remove("show");
-		} else {
-			deleteModal.classList.add("show");
-		}
-	});
-});
-
-adminNavBtn.addEventListener("click", () => {
-	let visible = adminNav.getAttribute("data-visible");
-
-	if (visible === "false") {
-		adminNav.setAttribute("data-visible", true);
-	} else {
-		console.log("open");
-	}
-});
+}

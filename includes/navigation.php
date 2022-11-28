@@ -1,7 +1,7 @@
 <header class="scrollEffect header">
     <h1 class="logo">Book<span>Share</span></h1>
 
-    <nav class="navigation__list">
+    <nav class="header__nav--list">
         <a href="">About</a>
         <a href="">Latest</a>
         <a href="">Reviews</a>
@@ -18,8 +18,8 @@
     </div>
 
     <button class="humbuger">
-        <span class="humbuger__bar"></span>
-        <span class="humbuger__bar"></span>
-        <span class="humbuger__bar"></span>
+        <span class="humbuger__bar bar--1"></span>
+        <span class="humbuger__bar" bar--2></span>
+        <span class="humbuger__bar" bar--3></span>
     </button>
 </header>
