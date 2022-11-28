@@ -25,12 +25,15 @@
 }
 
 .signup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 100vh;
 }
 
 .form {
 	transition: all 0.2s ease-in-out;
-	width: Min(100% - 4rem);
+	width: Min(80% - 0.5rem, 450px);
 
 	&--title {
 		margin-block: 1.5rem;
@@ -118,10 +121,6 @@
 				font-size: 0.8rem;
 			}
 		}
-	}
-
-	@include respond(tab-port) {
-		width: Min(100% - 0.5rem);
 	}
 }
 

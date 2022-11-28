@@ -14,19 +14,19 @@
     <div class="form__row--container">
         <div class="form__row">
             <label for="book_title" class="form__row--label">Title</label>
-            <input type="text" name="book_title" placeholder="Book title" value="<?= htmlspecialchars($book_title); ?>" />
+            <input type="text" name="book_title" placeholder="Book title" value="<?php echo $title; ?>" />
         </div>
 
         <div class=" form__row">
             <label for="book_author" class="form__row--label">Author</label>
-            <input type="text" name="book_author" placeholder=" Book author" src="../../images/<?= htmlspecialchars($book_author); ?>" value="<?= htmlspecialchars($book_author); ?>" />
+            <input type="text" name="book_author" placeholder=" Book author" src="../../images/<?= htmlspecialchars($author); ?>" value="<?php echo $author; ?>" />
         </div>
     </div>
 
     <div class="form__row--container">
         <div class="form__row">
             <label for="book_cover" class="form__row--label">Book cover</label>
-            <input type="file" class="form__row--img" name="book_cover" src="../uploads/pdf/<?= $book_author; ?>" value="<?= $book_cover; ?>" />
+            <input type="file" class="form__row--img" name="book_cover" src="../uploads/pdf/<?= $cover; ?>" value="<?= $cover; ?>" />
         </div>
 
         <div class="form__row">
@@ -36,7 +36,7 @@
     </div>
 
     <div class="form__row">
-        <label for="book_category" class="form__row--label">Category</label>
+        <label for="category" class="form__row--label">Category</label>
         <select name="book_category">
             <option value="">select a book category</option>
             <?php foreach ($categories as $category) : ?>
@@ -47,9 +47,9 @@
 
     <div class="form__row">
         <label for="book_description" class="form__row--label">Content</label>
-        <textarea name="book_description" id="" cols="30" rows="10" style="resize: none" placeholder="Book description"><?= htmlspecialchars($book_description); ?></textarea>
+        <textarea name="book_description" id="" cols="30" rows="10" style="resize: none" placeholder="Book description"><?php echo $book_description; ?></textarea>
     </div>
 
-    <button class="btn btn--submit">Save</button>
+    <button type="submit" class="btn btn--submit" name="submit">Save</button>
 </form>
 <!-- form end -->

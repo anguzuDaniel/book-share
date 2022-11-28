@@ -887,6 +887,9 @@ table tbody tr:nth-child(even) {
   border-bottom: var(--border-1) solid var(--gray-1);
   box-shadow: var(--shadow-2);
 }
+.header__nav--list:hover {
+  color: var(--orange-9);
+}
 .header .cta {
   display: flex;
   justify-content: center;
@@ -902,7 +905,7 @@ table tbody tr:nth-child(even) {
   transition: all 0.2s ease-in-out;
 }
 .header a:hover {
-  color: var(--clr-primary);
+  color: var(--orange-9);
 }
 @media only screen and (max-width: 56.25em) {
   .header__nav--list {
@@ -963,6 +966,7 @@ table tbody tr:nth-child(even) {
 }
 .scroll nav a {
   color: var(--gray-7);
+  color: var(--orange-9);
 }
 .scroll h1 {
   color: var(--gray-7);
@@ -1508,12 +1512,15 @@ aside {
 }
 
 .signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
 .form {
   transition: all 0.2s ease-in-out;
-  width: min(100% - 4rem);
+  width: min(80% - 0.5rem, 450px);
 }
 .form--title {
   margin-block: 1.5rem;
@@ -1585,11 +1592,6 @@ aside {
   margin-left: 0.5rem;
   letter-spacing: 0.5px;
   font-size: 0.8rem;
-}
-@media only screen and (max-width: 56.25em) {
-  .form {
-    width: min(100% - 0.5rem);
-  }
 }
 
 .notShown {

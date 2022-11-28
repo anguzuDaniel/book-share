@@ -44,6 +44,10 @@
 			font-size: var(--size-3);
 			border-bottom: var(--border-1) solid var(--gray-1);
 			box-shadow: var(--shadow-2);
+
+			&:hover {
+				color: var(--orange-9);
+			}
 		}
 	}
 
@@ -63,7 +67,7 @@
 		transition: all 0.2s ease-in-out;
 
 		&:hover {
-			color: var(--clr-primary);
+			color: var(--orange-9);
 		}
 	}
 
@@ -136,6 +140,7 @@
 	nav {
 		a {
 			color: var(--gray-7);
+			color: var(--orange-9);
 		}
 	}
 

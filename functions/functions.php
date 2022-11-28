@@ -176,12 +176,12 @@ function getAllCategories($conn, $columns = "*")
  * @param  mixed $file
  * @param  mixed $description
  * @param  mixed $category
- * @return void
+ * @return array
  */
 function addBook($conn, $name, $author, $image, $file, $description, $category)
 {
-    $sql = "INSERT INTO book(name, author, image, file, description, category) 
-            VALUES (:name, :author, :image,  :file, :description, :category)  ";
+    $sql = "INSERT INTO `book` (`id`, `name`, `author`, `image`, `file`, `description`, `category`) 
+    VALUES (NULL, :name, :author, :image,  :file, :description, :category)  ";
 
     $stmt = $conn->prepare($sql);
 
@@ -192,7 +192,7 @@ function addBook($conn, $name, $author, $image, $file, $description, $category)
     $stmt->bindParam(':description', $description);
     $stmt->bindParam(':category', $category);
 
-    $stmt->execute(array(':name' => $name, ':author' => $author, ':image' => $image, ':file' => $file, ':description' => $description, ':category' => $category));
+    return  $stmt->execute();
 }
 
 function createUser($conn, $email, $name, $password)

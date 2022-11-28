@@ -7,6 +7,18 @@ $conn = getConn();
 $categories = getAllCategories($conn);
 $id = $_GET['id'];
 
+$title = "";
+$author = "";
+
+// upload book cover/image
+$cover = "";
+
+// upload pdf/ book soft copy
+$upload_pdf = '';
+
+$book_description = '';
+$category = '';
+
 if (isset($_GET['id'])) {
     $books = getBookById($conn, $id);
 
@@ -22,14 +34,14 @@ if (isset($_GET['id'])) {
     echo "Book doesn't exist";
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if (isset($_POST['submit'])) {
 
 
-    $book_title = $_POST['book_title'];
-    $book_author = $_POST['book_author'];
+    $title = $_POST['book_title'];
+    $author = $_POST['book_author'];
 
     // upload book cover/image
-    $book_cover = $_FILES['book_cover']['name'];
+    $cover = $_FILES['book_cover']['name'];
     $temp_cover = $_FILES['book_cover']['tmp_name'];
 
     // upload pdf/ book soft copy
@@ -79,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php if (!$id) : ?>
                 <p>Sorry, no book with that id found. Please provide a valid book id.</p>
             <?php else : ?>
-                <?php require_once "includes/form.php"; ?>
+                <?php require_once "./includes/form.php"; ?>
             <?php endif; ?>
         </section>
         <!-- admin section wrapper end -->
