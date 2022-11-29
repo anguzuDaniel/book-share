@@ -1,31 +1,31 @@
 <table>
     <caption style="display:none;">All book in the database</caption>
     <thead>
-        <th>
-        <td>
-            <p>
-                Name
-            </p>
-        </td>
-        <td>
-            <p>Author</p>
-        </td>
-        <td>
-            <p>Image</a>
-        </td>
-        <td>
-            <p>File</p>
-        </td>
-        <td>
-            <p>Desc</p>
-        </td>
-        <td>
-            <p>CatID</p>
-        </td>
-        <td colspan="2">
-            <p>Operations</p>
-        </td>
-        </th>
+        <tr>
+            <td>
+                <p>
+                    Name
+                </p>
+            </td>
+            <td>
+                <p>Author</p>
+            </td>
+            <td>
+                <p>Image</a>
+            </td>
+            <td>
+                <p>File</p>
+            </td>
+            <td>
+                <p>Desc</p>
+            </td>
+            <td>
+                <p>CatID</p>
+            </td>
+            <td colspan="2">
+                <p>Operations</p>
+            </td>
+        </tr>
     </thead>
 
     <tbody>

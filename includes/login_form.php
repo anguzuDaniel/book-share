@@ -5,7 +5,7 @@ if (isset($_POST['signin'])) {
     if (!$errors) {
 
         if (authenticateUser($conn, $_POST['login_email'], $_POST['login_password'])) {
-            
+
             login();
 
             redirect("/book-share/index.php");
@@ -18,12 +18,7 @@ if (isset($_POST['signin'])) {
 
 <div class="form__login notShown">
 
-    <!-- prints out error meassgae for wrong cridentials -->
-    <?php if (!empty($errors)) : ?>
-        <div class='error--signup'>
-            <p><?= $errors; ?>.</p>
-        </div>
-    <?php endif; ?>
+
 
     <h1 class="form--title">Sign In</h1>
     <form id="login" method="post" class="form__wrapper">
@@ -35,7 +30,7 @@ if (isset($_POST['signin'])) {
             </div>
 
             <div class="form__input">
-                <input type="text" placeholder="Email" id="login_email" class="login_email" name="login_email" />
+                <input type="text" placeholder="Email" id="login_email" class="login_email" name="login_email" required />
             </div>
         </div>
 
@@ -47,7 +42,7 @@ if (isset($_POST['signin'])) {
             </div>
 
             <div class="form__input">
-                <input type="password" class="login_password" id="login_password" placeholder="Password" name="login_password" />
+                <input type="password" class="login_password" id="login_password" placeholder="Password" name="login_password" required />
             </div>
         </div>
 

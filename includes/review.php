@@ -45,50 +45,6 @@
                     expedita commodi eum.
                 </p>
             </article>
-            <article class="card card--active">
-
-                <div class="card__description">
-
-                    <img src="images/images (43).jpeg" alt="" srcset="" class="review--img" />
-                    <div class="card__description__name">
-                        <h3>Anguzu Daniel</h3>
-                        <div class="star">
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                        </div>
-                    </div>
-                </div>
-                <p class="card__content">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Voluptates tenetur quo est rem beatae, rerum, voluptas facere
-                    expedita commodi eum.
-                </p>
-            </article>
-
-            <article class="card">
-                <div class="card__description">
-
-                    <img src="images/images (1).png" alt="" srcset="" class="review--img" />
-                    <div class="card__description__name">
-                        <div class="star">
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star"></em>
-                            <em class="fa fa-star-half-stroke"></em>
-                            <em class="fa fa-star-half-stroke"></em>
-                        </div>
-                        <h3>Kenyi Jonathan</h3>
-                    </div>
-                </div>
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Voluptates tenetur quo est rem beatae, rerum, voluptas facere
-                    expedita commodi eum.
-                </p>
-            </article>
         </div>
 
     </div>

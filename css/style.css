@@ -460,6 +460,7 @@ button {
   box-shadow: var(--shadow-1);
   padding: var(--size-2) var(--size-2);
   font-size: 0.8rem;
+  padding: var(--size-2) var(--size-3);
 }
 @media only screen and (max-width: 56.25em) {
   button {
@@ -885,7 +886,6 @@ table tbody tr:nth-child(even) {
   gap: 20px;
   font-size: var(--size-3);
   border-bottom: var(--border-1) solid var(--gray-1);
-  box-shadow: var(--shadow-2);
 }
 .header__nav--list:hover {
   color: var(--orange-9);
@@ -1218,7 +1218,7 @@ aside {
 }
 
 .book {
-  padding: max(var(--size-2), var(--size-4)) max(var(--size-6), var(--size-8));
+  padding: max(var(--size-2), var(--size-4)) max(var(--size-4), var(--size-5));
 }
 .book__wrapper {
   display: grid;

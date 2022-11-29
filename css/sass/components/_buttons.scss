@@ -28,6 +28,7 @@ button {
 	box-shadow: var(--shadow-1);
 	padding: var(--size-2) var(--size-2);
 	font-size: 0.8rem;
+	padding: var(--size-2) var(--size-3);
 
 	@include respond(tab-port) {
 		padding: var(--size-3) var(--size-2);

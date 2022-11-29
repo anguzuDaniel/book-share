@@ -18,7 +18,7 @@ if (isset($_POST['signup'])) {
                 $conn->errorInfo();
             }
         }
-    } 
+    }
 }
 ?>
 <div class="form__signup">
@@ -56,7 +56,7 @@ if (isset($_POST['signup'])) {
             </div>
 
             <div class="form__input">
-                <input name="email" type="text" placeholder="example@gmail.com" id="email" class="email" name="email" />
+                <input name="email" type="text" placeholder="example@gmail.com" id="email" class="email" name="email" required />
             </div>
         </div>
 
@@ -67,7 +67,7 @@ if (isset($_POST['signup'])) {
             </div>
 
             <div class="form__input">
-                <input type="text" placeholder="Username" id="username" class="username" name="username" />
+                <input type="text" placeholder="Username" id="username" class="username" name="username" required />
             </div>
         </div>
 
@@ -78,7 +78,7 @@ if (isset($_POST['signup'])) {
             </div>
 
             <div class="form__input">
-                <input type="password" class="password" id="password" name="password" placeholder="Create password" />
+                <input type="password" class="password" id="password" name="password" placeholder="Create password" required />
             </div>
         </div>
 
@@ -89,7 +89,7 @@ if (isset($_POST['signup'])) {
             </div>
 
             <div class="form__input">
-                <input type="password" class="confirm_password" id="confirm_password" name="confirm_password" placeholder="Confrim password" />
+                <input type="password" class="confirm_password" id="confirm_password" name="confirm_password" placeholder="Confrim password" required />
             </div>
         </div>
 
