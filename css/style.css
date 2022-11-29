@@ -1797,6 +1797,7 @@ aside {
   margin-top: var(--size-3);
   margin-bottom: var(--size-3);
   margin-inline: var(--size-5);
+  margin-inline: min(80% - 0.5rem, 450px);
 }
 .admin__content h1 {
   margin-block: var(--size-4);

@@ -254,6 +254,7 @@
 		margin-top: var(--size-3);
 		margin-bottom: var(--size-3);
 		margin-inline: var(--size-5);
+		margin-inline: Min(80% - 0.5rem, 450px);
 
 		h1 {
 			margin-block: var(--size-4);
