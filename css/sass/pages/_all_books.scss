@@ -27,12 +27,11 @@
 .all_books {
 	display: flex;
 	padding: var(--size-9) max(var(--size-2), var(--size-6));
-	margin-top: 4rem;
+	margin-top: 2rem;
 	gap: 40px;
 	position: relative;
 
-	.book {
-		margin: 0;
+	& .book {
 		padding: 0;
 
 		&__wrapper {
@@ -46,32 +45,25 @@
 				border: 1px solid var(--border);
 				box-shadow: var(--shadow-0);
 				border-radius: var(--radius-2);
-				padding: 0;
-				gap: 10px;
-			}
-		}
-
-		&__description {
-			padding: var(--size-4);
-		}
-
-		&__btn {
-			width: 100%;
-			text-align: center;
-
-			&--wrapper {
-				display: flex;
+				padding: 0.8rem;
 				gap: 20px;
 			}
 		}
 
+		&__description {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+		}
+
 		&__image {
 			border: var(--shadow-4);
+			transform: translateY(-50px);
 			box-shadow: var(--shadow-3);
+			height: 120%;
 			overflow: hidden;
 			cursor: pointer;
 			width: 700px;
-			height: 120%;
 
 			img {
 				width: 100%;
@@ -87,40 +79,53 @@
 				}
 			}
 		}
+
+		&__author {
+			font-size: 0.8rem;
+		}
+
+		&__more {
+			text-align: center;
+			margin-top: var(--size-4);
+			transition: all 0.3s ease-in-out;
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&--title {
+			text-transform: uppercase;
+			margin-bottom: var(--size-7);
+		}
+
+		&__title {
+			text-transform: capitalize;
+			font-size: var(--size-3);
+			opacity: 0.8;
+		}
+
+		&__text {
+			font-size: 0.8rem;
+		}
+
+		&__download {
+			font-size: 0.8rem;
+		}
 	}
 
-	aside {
-		border: none;
-		width: 1000px;
+	&__btn {
+		width: 100%;
+		text-align: center;
 
-		h1 {
-			margin-bottom: var(--size-5);
-		}
-
-		p {
-			font-size: var(--size-6);
-			opacity: 0.6;
-		}
-
-		ul {
-			display: flex;
-			flex-direction: column;
+		&--wrapper {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
 			gap: 20px;
-
-			li {
-				list-style: none;
-				display: flex;
-				align-items: center;
-				border-bottom: var(--size-1) solid var(--gray-2);
-				padding-bottom: var(--size-2);
-				gap: 10px;
-
-				a {
-					font-size: 1rem;
-					text-decoration: none;
-					color: var(--color-links);
-				}
-			}
 		}
 	}
 

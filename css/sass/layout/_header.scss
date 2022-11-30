@@ -70,6 +70,27 @@
 		}
 	}
 
+	&--book-page {
+		background-color: var(--gray-1);
+		border-bottom: 1px solid rgba(128, 128, 128, 0.222);
+		z-index: 999;
+
+		nav {
+			a {
+				color: var(--gray-7);
+				color: var(--orange-9);
+			}
+		}
+
+		h1 {
+			color: var(--gray-7);
+		}
+
+		.login__btn {
+			color: var(--orange-9);
+		}
+	}
+
 	@include respond(tab-port) {
 		&__nav {
 			&--list {

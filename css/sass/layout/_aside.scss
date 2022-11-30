@@ -1,12 +1,4 @@
 /* side navigation style start | home page */
-aside {
-	width: 300px;
-	margin-top: calc(var(--margin-top) * 2);
-	font-size: 2rem;
-	position: sticky;
-	top: 0;
-}
-
 .side {
 	margin-top: var(--margin-top);
 
@@ -91,6 +83,7 @@ aside {
 			display: grid;
 			gap: 10px;
 			justify-content: center;
+			z-index: 9;
 		}
 
 		&--heading {
@@ -120,3 +113,38 @@ aside {
 	}
 }
 /* side navigation style end | home page */
+
+aside {
+	border: none;
+	width: 600px;
+
+	h1 {
+		margin-bottom: var(--size-5);
+	}
+
+	p {
+		font-size: var(--size-6);
+		opacity: 0.6;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		li {
+			list-style: none;
+			display: flex;
+			align-items: center;
+			border-bottom: 2px solid var(--gray-2);
+			padding-bottom: var(--size-2);
+			gap: 10px;
+
+			a {
+				font-size: 1rem;
+				text-decoration: none;
+				color: var(--color-links);
+			}
+		}
+	}
+}

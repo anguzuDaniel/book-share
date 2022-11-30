@@ -2,29 +2,29 @@
     <caption style="display:none;">All book in the database</caption>
     <thead>
         <tr>
-            <td>
-                <p>
-                    Name
-                </p>
-            </td>
-            <td>
-                <p>Author</p>
-            </td>
-            <td>
-                <p>Image</a>
-            </td>
-            <td>
-                <p>File</p>
-            </td>
-            <td>
-                <p>Desc</p>
-            </td>
-            <td>
-                <p>CatID</p>
-            </td>
-            <td colspan="2">
-                <p>Operations</p>
-            </td>
+            <th>
+
+                Name
+
+            </th>
+            <th>
+                Author
+            </th>
+            <th>
+                Image
+            </th>
+            <th>
+                File
+            </th>
+            <th>
+                Desc
+            </th>
+            <th>
+                CatID
+            </th>
+            <th colspan="2">
+                Operations
+            </th>
         </tr>
     </thead>
 
@@ -33,40 +33,40 @@
         <?php foreach ($books as $book) : ?>
             <tr>
                 <td>
-                    <p><?= substr($book['name'], 0, 5); ?>..</p>
+                    <?= substr($book['name'], 0, 5); ?>..
                 </td>
                 <td>
-                    <p><?= substr($book['author'], 0, 5); ?>..</p>
+                    <?= substr($book['author'], 0, 5); ?>..
                 </td>
                 <td>
-                    <p><img src="../images/<?= $book['image']; ?>" alt="<?= $book['name'], 0, 5; ?> image" /></p>
+                    <img src="../images/<?= $book['image']; ?>" alt="<?= $book['name'], 0, 5; ?> image" />
                 </td>
                 <td>
-                    <p><?= substr($book['file'], 0, 5); ?></p>
+                    <?= substr($book['file'], 0, 5); ?>
                 </td>
                 <td>
-                    <p><?= substr($book['description'], 0, 5); ?>..</p>
+                    <?= substr($book['description'], 0, 5); ?>..
                 </td>
                 <td>
-                    <p><?= $book['category']; ?></p>
+                    <?= $book['category']; ?>
                 </td>
                 <td>
-                    <p>
-                        <button type="submit" class="edit__icon">
-                            <a href="edit_book.php?id=<?= $book['id']; ?>">
-                                <em class="fa-regular fa-pen-to-square"></em>
-                            </a>
-                        </button>
-                    </p>
+
+                    <button type="submit" class="edit__icon">
+                        <a href="edit_book.php?id=<?= $book['id']; ?>">
+                            <em class="fa-regular fa-pen-to-square"></em>
+                        </a>
+                    </button>
+
                 </td>
                 <td>
-                    <p>
-                        <button type="submit" class="showDeleteModal delete__icon">
-                            <a href="delete_book.php?id=<?= $book['id']; ?>">
-                                <em class="fa-regular fa-trash-can"></em>
-                            </a>
-                        </button>
-                    </p>
+
+                    <button type="submit" class="showDeleteModal delete__icon">
+                        <a href="delete_book.php?id=<?= $book['id']; ?>">
+                            <em class="fa-regular fa-trash-can"></em>
+                        </a>
+                    </button>
+
                 </td>
             </tr>
         <?php endforeach; ?>

@@ -8,14 +8,13 @@ $books = getAllBooks($conn);
 
 $categories = getAllCategories($conn);
 
-$count = 0;
 ?>
-<?php require_once "includes/navigation.php"; ?>
+<?php require_once "includes/navigation-book-page.php"; ?>
 
 <section class="all_books">
 
     <section class="book">
-        <h1 class="book--title">All BOOKS</h1>
+        <h1 class="book--title">All books</h1>
 
         <div class="book__wrapper">
             <!-- all books display | start -->
@@ -32,7 +31,7 @@ $count = 0;
         <ul>
             <?php foreach ($categories as $category) : ?>
                 <li>
-                    <p>0<?= $count++; ?></p> <a href=""><?= $category['name']; ?></a>
+                    <a href=""><?= $category['name']; ?></a>
                 </li>
             <?php endforeach; ?>
         </ul>

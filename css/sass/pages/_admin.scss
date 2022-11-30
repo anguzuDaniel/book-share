@@ -325,7 +325,7 @@
 	// Admin sidebar navigation | ends here
 
 	&__content {
-		margin: var(--size-3) var(--size-6);
+		margin: var(--size-5) var(--size-7);
 
 		h1 {
 			margin-block: var(--size-4);
@@ -366,7 +366,7 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
 		gap: 20px;
-		margin-bottom: var(--size-3);
+		margin-bottom: var(--size-5);
 	}
 
 	&__card {
@@ -380,7 +380,20 @@
 		border: var(--border-size-1) solid var(--gray-1);
 		box-shadow: var(--shadow-1);
 		border: 1px solid var(--gray-3);
-		padding: var(--size-2) var(--size-3);
+		padding: var(--size-3);
+		border-left: 3px solid var(--blue-9);
+
+		&:is(:nth-child(1)) {
+			border-left: 3px solid var(--blue-9);
+		}
+
+		&:is(:nth-child(2)) {
+			border-left: 3px solid var(--red-9);
+		}
+
+		&:is(:nth-child(3)) {
+			border-left: 3px solid var(--green-9);
+		}
 
 		&--icon {
 			font-size: var(--size-6);

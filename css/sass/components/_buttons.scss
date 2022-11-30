@@ -24,6 +24,10 @@
 	}
 }
 
+button {
+	font-size: 0.8rem;
+}
+
 .btn {
 	cursor: pointer;
 	border: none;
@@ -53,9 +57,28 @@
 		background-color: var(--color-primary);
 		color: white;
 		border-radius: var(--radius-2);
+		text-align: center;
 
 		a {
 			text-decoration: none;
+		}
+	}
+
+	&--footer {
+		background-color: var(--orange-6);
+		color: white;
+		padding: var(--size-2) var(--size-3);
+		text-transform: capitalize;
+		border-top-right-radius: var(--radius-2);
+		border-bottom-right-radius: var(--radius-2);
+		font-weight: normal;
+		cursor: pointer;
+		display: block;
+		transition: all 0.3s ease-in-out;
+		border: none;
+
+		&:hover {
+			border: none;
 		}
 	}
 

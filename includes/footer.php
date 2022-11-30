@@ -13,7 +13,7 @@
 
         <form>
             <input type="text" placeholder="Join our email list.." class="footer__input" />
-            <button class="btn footer__btn">Submit</button>
+            <button class="btn--footer">Submit</button>
         </form>
     </div>
 
