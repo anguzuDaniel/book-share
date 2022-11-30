@@ -24,6 +24,8 @@ const homeHumbugerBtn = document.querySelector(".humbuger");
 const homeNav = document.querySelector(".header__nav--list");
 const homeCtaBtns = document.querySelector(".cta");
 
+const adminContent = document.querySelector('.admin__container');
+
 /** functions */
 // adds white background to header when scrolling down
 window.onscroll = function () {
@@ -59,11 +61,13 @@ if (adminNavBtn != null) {
 			adminNavText.forEach((e) => {
 				e.style.display = "flex";
 			});
+			adminContent.style.width = "200px";
 		} else {
 			adminNav.setAttribute("data-visible", false);
 			adminNavText.forEach((e) => {
 				e.style.display = "none";
 			});
+			adminContent.style.width = "";
 		}
 	});
 }

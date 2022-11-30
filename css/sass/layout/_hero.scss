@@ -66,10 +66,10 @@
 
 	&__search {
 		width: Max(400px, 100%);
-		padding: var(--size-2) var(--size-3);
+		padding: var(--size-3) var(--size-3);
 		display: flex;
-		border-top-left-radius: var(--size-1);
-		border-bottom-left-radius: var(--size-1);
+		border: none;
+		border-radius: var(--size-1);
 	}
 
 	&__paragraph {

@@ -61,6 +61,6 @@
         <textarea name="book_description" id="" cols="30" rows="10" style="resize: none" placeholder="Book description" required><?php echo $book_description; ?></textarea>
     </div>
 
-    <button type="submit" class="btn btn--submit" name="submit">Save</button>
+    <button type="submit" class="btn--submit" name="submit">Save</button>
 </form>
 <!-- form end -->

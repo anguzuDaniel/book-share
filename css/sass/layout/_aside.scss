@@ -1,9 +1,10 @@
 /* side navigation style start | home page */
 aside {
-	margin-left: 1rem;
 	width: 300px;
 	margin-top: calc(var(--margin-top) * 2);
 	font-size: 2rem;
+	position: sticky;
+	top: 0;
 }
 
 .side {

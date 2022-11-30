@@ -23,28 +23,40 @@
 		}
 	}
 }
-button {
-	font-weight: light;
-	box-shadow: var(--shadow-1);
-	padding: var(--size-2) var(--size-2);
-	font-size: 0.8rem;
-	padding: var(--size-2) var(--size-3);
-
-	@include respond(tab-port) {
-		padding: var(--size-3) var(--size-2);
-	}
-}
 
 .btn {
 	cursor: pointer;
 	border: none;
-	background-color: var(--orange-6);
-	background-color: #0a84ff;
 	color: white;
 	border-radius: var(--radius-2);
+	padding: var(--size-1) var(--size-3);
+	background-color: var(--color-primary);
+	display: block;
+	font-size: 1rem;
+	font-weight: normal;
 
-	&:hover {
-		background-color: var(#0a84ffab);
+	&--submit {
+		background-color: var(--orange-6);
+		color: white;
+		padding: var(--size-2) var(--size-3);
+		text-transform: capitalize;
+		border-radius: var(--radius-2);
+		font-size: 0.8rem;
+		font-weight: normal;
+		cursor: pointer;
+		display: block;
+		transition: all 0.3s ease-in-out;
+	}
+
+	&--download {
+		padding: var(--size-2) var(--size-3);
+		background-color: var(--color-primary);
+		color: white;
+		border-radius: var(--radius-2);
+
+		a {
+			text-decoration: none;
+		}
 	}
 
 	&__control {
@@ -85,8 +97,7 @@ button {
 .signup__btn {
 	background-color: var(--orange-6);
 	color: white;
-	padding: 0.5rem 0.8rem;
-	text-shadow: 0 1px 0 var(--orange-6);
+	padding: var(--size-2) var(--size-3);
 	text-transform: capitalize;
 	border-radius: var(--radius-2);
 
